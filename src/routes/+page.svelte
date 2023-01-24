@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Appbar } from '../components';
+	import FlightDetails from '../components/FlightDetails.svelte';
 	let balance: number = 1500;
 </script>
 
@@ -16,3 +17,6 @@
 		</button>
 	</div>
 </Appbar>
+<section>
+	<FlightDetails />
+</section>

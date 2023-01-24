@@ -8,8 +8,8 @@ interface IGlobalStore {
 }
 
 export const GlobalStore: Writable<IGlobalStore> = writable({
-	startLocation: '',
-	endLocation: '',
+	startLocation: 'BLR',
+	endLocation: 'HYD',
 	setStartLocation: (location: string) => {
 		GlobalStore.update((store) => {
 			store.startLocation = location;
