@@ -69,7 +69,10 @@
 <section class="w-full max-w-screen-sm mx-auto mt-6 sm:px-2">
 	<FlightDetails />
 	<div class="mt-6">
-		<h4>Upcoming Bookings</h4>
+		<div class="flex justify-between items-center">
+			<h4>Upcoming Bookings</h4>
+			<a class="link link-hover text-sm text-primary" href="/">View All</a>
+		</div>
 		<div class="carousel w-full max-w-full space-x-4">
 			{#each upcomingBookings as booking}
 				<Card classes="carousel-item flex items-center py-4">
