@@ -3,7 +3,7 @@
 	export let backLink: string = '';
 </script>
 
-<nav class="w-full h-[80px] bg-[#032F49] px-4 sticky top-0">
+<nav class="w-full h-[80px] bg-primary px-4 sticky top-0">
 	<div class="w-full max-w-screen-sm h-full mx-auto flex justify-between items-center text-white">
 		<div class="flex justify-start items-center">
 			{#if backLink?.length}
