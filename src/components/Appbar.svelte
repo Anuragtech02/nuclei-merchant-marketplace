@@ -16,3 +16,24 @@
 		<slot name="extras" />
 	</div>
 </nav>
+
+<style>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	nav::after {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 80px;
+		@apply bg-primary;
+		z-index: 0;
+	}
+	nav > div {
+		position: relative;
+		z-index: 5;
+	}
+</style>
