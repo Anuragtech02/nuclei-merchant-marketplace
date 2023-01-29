@@ -1,31 +1,37 @@
 import { writable, type Updater, type Writable } from 'svelte/store';
+import type { IBooking, ISearchRequest } from '../interfaces';
 
-export interface IFlightDetails {
-	source: string;
-	destination: string;
-	departureDate: string; // ISO Date String
-	returnDate: string; // ISO Date String
-	travelClass: string; // Economy, Business, First
-	travellers: number;
-}
+const defaultFlightDetails: ISearchRequest = {} as ISearchRequest;
+
+const defaultUpcomingBookings: IBooking[] = [];
+
+const defaultRecentSearches: IRecentSearch[] = [];
 
 const defaultGlobalState = {
-	source: 'BLR',
-	destination: 'IDR',
-	departureDate: new Date().toISOString(),
-	returnDate: new Date(new Date().setDate(new Date().getDate() + 2)).toISOString(),
-	travelClass: 'economy',
-	travellers: 0
+	searchRequest: defaultFlightDetails,
+	upcomingBookings: defaultUpcomingBookings,
+	recentSearches: defaultRecentSearches
 };
 
+export interface IRecentSearch extends ISearchRequest {
+	id: string; // ISO Date String
+	createdAt: string; // ISO Date String
+}
+
+export interface IGlobalStoreData {
+	searchRequest: ISearchRequest;
+	upcomingBookings: IBooking[];
+	recentSearches: IRecentSearch[];
+}
+
 interface IGlobalStore {
-	subscribe: Writable<IFlightDetails>['subscribe'];
+	subscribe: Writable<IGlobalStoreData>['subscribe'];
 	reset: () => void;
-	update: (this: void, updater: Updater<IFlightDetails>) => void;
+	update: (this: void, updater: Updater<IGlobalStoreData>) => void;
 }
 
 function createGlobalStore(): IGlobalStore {
-	const { subscribe, update } = writable<IFlightDetails>(defaultGlobalState);
+	const { subscribe, update } = writable<IGlobalStoreData>(defaultGlobalState);
 
 	function reset() {
 		update(() => defaultGlobalState);

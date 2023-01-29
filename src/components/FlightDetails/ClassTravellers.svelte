@@ -13,8 +13,10 @@
 	let maxTravellerDisabled = false;
 
 	subscribe((value) => {
-		travelClass = value.travelClass;
-		travellers = value.travellers;
+		travelClass = value.searchRequest.travellerClass;
+		adults = value.searchRequest.adultCount;
+		children = value.searchRequest.childCount;
+		infants = value.searchRequest.infantCount;
 	});
 
 	function getAvailableTravellers() {
@@ -33,7 +35,7 @@
 		<label for="traveller-class">
 			<span>Class</span>
 			<div>
-				<p>{TRAVEL_CLASS_OPTIONS[travelClass]}</p>
+				<p>{travelClass}</p>
 				<img src="icons/arrow-down.svg" alt="arrow-down" class="w-4 h-3" />
 			</div>
 		</label>
@@ -77,7 +79,7 @@
 		<div class="mt-4">
 			<h4 class="font-medium">Select Class</h4>
 			<div class="mt-2">
-				{#each Object.keys(TRAVEL_CLASS_OPTIONS) as tClass}
+				{#each TRAVEL_CLASS_OPTIONS as tClass}
 					<div class="form-control">
 						<label class="label cursor-pointer p-0 my-2 flex justify-start">
 							<input
@@ -87,7 +89,7 @@
 								value={tClass}
 								bind:group={travelClass}
 							/>
-							<span class="label-text ml-2 text-black">{TRAVEL_CLASS_OPTIONS[tClass]}</span>
+							<span class="label-text ml-2 text-black">{tClass}</span>
 						</label>
 					</div>
 				{/each}

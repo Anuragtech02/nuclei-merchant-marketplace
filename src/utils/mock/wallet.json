@@ -1,0 +1,20 @@
+{
+	"response": {
+		"responseCode": "SUCCESS",
+		"responseCodeCause": "NO_SPECIFIC_CAUSE",
+		"responseMessage": "USER_BALANCE_RETURNED_SUCCESSFULLY"
+	},
+	"walletDetails": {
+		"walletName": "Nuclei Wallet",
+		"walletTotalBalance": 0,
+		"walletAppliedRedeemedAmount": 0,
+		"walletRollbackAmount": 0,
+		"userBlocked": false,
+		"banner": "",
+		"displayInfo": {
+			"currency_symbol": "₹",
+			"toast_message": "Your Wallet Balance is ₹ 0.00",
+			"overlay_message": "Your Wallet Balance is ₹ 0.0"
+		}
+	}
+}

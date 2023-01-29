@@ -120,14 +120,7 @@ export const CITIES = [
 	{ name: 'Yavatmal', code: 'YTL' }
 ];
 
-export const TRAVEL_CLASS_OPTIONS: {
-	[key: string]: string;
-} = {
-	economy: 'Economy',
-	premiumEconomy: 'Premium Economy',
-	business: 'Business',
-	first: 'First'
-};
+export const TRAVEL_CLASS_OPTIONS: string[] = ['Economy', 'Premium Economy', 'Business', 'First'];
 
 export const travellersOptions = [
 	{

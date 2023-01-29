@@ -1,0 +1,45 @@
+{
+	"booking": [
+		{
+			"id": "N-UD2TRDZ-ZS3P1Q9-C4WRW98",
+			"title": "New Delhi → Bangalore",
+			"subtitle": "Thu, Sep 22",
+			"thirdTitle": "1 Traveller | Economy",
+			"imageUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_SG_xxxhdpi.png",
+			"ctaButton": []
+		},
+		{
+			"id": "N-T9TYHEI-330F18C-PFBG27L",
+			"title": "New Delhi → Mumbai",
+			"subtitle": "Thu, Sep 29",
+			"thirdTitle": "1 Traveller | Economy",
+			"imageUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_6E_xxxhdpi.png",
+			"ctaButton": []
+		},
+		{
+			"id": "N-NP8YEXA-FDV31DH-J439BK7",
+			"title": "New Delhi → Mumbai",
+			"subtitle": "Fri, Oct 07",
+			"thirdTitle": "1 Traveller | Economy",
+			"imageUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxxhdpi.png",
+			"ctaButton": []
+		},
+		{
+			"id": "N-00QU7F9-1MGU2S6-86QBNOR",
+			"title": "New Delhi → Bangalore",
+			"subtitle": "Fri, Oct 14",
+			"thirdTitle": "1 Traveller | Economy",
+			"imageUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_G8_xxxhdpi.png",
+			"ctaButton": []
+		},
+		{
+			"id": "N-0PKUZU1-N56Q3NC-H1AONIV",
+			"title": "New Delhi → Mumbai",
+			"subtitle": "Thu, Oct 27",
+			"thirdTitle": "1 Traveller | Economy",
+			"imageUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_SG_xxxhdpi.png",
+			"ctaButton": []
+		}
+	],
+	"totalRecords": 78
+}

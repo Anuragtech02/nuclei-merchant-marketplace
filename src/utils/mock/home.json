@@ -1,0 +1,120 @@
+{
+	"status": {
+		"responseCode": "SUCCESS",
+		"responseCodeCause": "NO_SPECIFIC_CAUSE",
+		"responseMessage": "Initial Config"
+	},
+	"searchRequest": {
+		"src": {
+			"iataCode": "DEL",
+			"city": "New Delhi",
+			"name": "Indira Gandhi International Airport",
+			"countryCode": "IN",
+			"iconUrl": ""
+		},
+		"des": {
+			"iataCode": "BOM",
+			"city": "Mumbai",
+			"name": "Chhatrapati Shivaji International Airport",
+			"countryCode": "IN",
+			"iconUrl": ""
+		},
+		"travellerClass": "Economy",
+		"departDate": "1674800659629",
+		"returnDate": "0",
+		"adultCount": 1,
+		"childCount": 0,
+		"infantCount": 0,
+		"isRoundTrip": false,
+		"partnerCountry": "IN",
+		"partnerCurrency": "INR",
+		"configMap": {
+			"MIN_TOTAL_GUEST": "1",
+			"NON_STOP_FLIGHT_LANDING": "false",
+			"MAX_TOTAL_GUEST": "9",
+			"CACHING_TIME_IN_MILLISECOND": "86400000",
+			"SEARCH_CITY_REGEX": "^[a-zA-Z\\s]*$",
+			"PASSPORT_NUMBER_REGEX": "[a-zA-Z]{1}[0-9]{7}",
+			"ONWARD_NUMBER_OF_STOP_FILTER_ID": "1",
+			"MAX_CALENDER_DAYS": "365",
+			"SEARCH_CITY_REGEX_ERROR_MESSAGE": "Only characters(a-z) are allowed",
+			"GST_ENABLED": "true",
+			"PASSPORT_DATE_MAX_YEARS": "10",
+			"RETURN_NUMBER_OF_STOP_FILTER_ID": "2",
+			"BOOKING_RESULT_PER_PAGE": "10",
+			"NON_STOP_FLIGHT_FILTER_ID": "0",
+			"LISTING_LOADING_MESSAGE": "Fetching the best flights for you while you wait."
+		},
+		"travellers": [
+			{
+				"key": "ECONOMY",
+				"value": "Economy Class"
+			},
+			{
+				"key": "BUSINESS",
+				"value": "Business Class"
+			},
+			{
+				"key": "PREMIUM",
+				"value": "Premium Economy Class"
+			}
+		],
+		"guests": [
+			{
+				"guestType": "ADULT",
+				"textName": "Adults",
+				"subTextName": "12 years and above",
+				"defaultValue": 1,
+				"minValue": 0,
+				"maxValue": 9,
+				"displayOrder": 1,
+				"errorMessage": ""
+			},
+			{
+				"guestType": "CHILD",
+				"textName": "Children",
+				"subTextName": "2 to 12 years",
+				"defaultValue": 0,
+				"minValue": 0,
+				"maxValue": 9,
+				"displayOrder": 2,
+				"errorMessage": ""
+			},
+			{
+				"guestType": "INFANT",
+				"textName": "Infants",
+				"subTextName": "Less than 2 years",
+				"defaultValue": 0,
+				"minValue": 0,
+				"maxValue": 4,
+				"displayOrder": 3,
+				"errorMessage": "Infants cannot be more than adults"
+			}
+		],
+		"defaultSortFilter": {
+			"tabId": "DUMMY",
+			"sortId": "1",
+			"filtersList": [
+				{
+					"filterId": 1,
+					"appliedFilterValueList": {
+						"filterValues": ["0"]
+					}
+				},
+				{
+					"filterId": 2,
+					"appliedFilterValueList": {
+						"filterValues": ["0"]
+					}
+				}
+			]
+		}
+	},
+	"categorySdkConfig": {
+		"couponEnabled": true,
+		"walletEnabled": true,
+		"payload": {
+			"wallet-info": "dummy-value"
+		}
+	}
+}

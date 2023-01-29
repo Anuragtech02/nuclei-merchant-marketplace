@@ -1,0 +1,3414 @@
+{
+	"onwardFlights": [
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1900",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674834900",
+				"departTimestamp": "1674826200",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "19:00 - 21:25",
+				"airlineDuration": "02h 25m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1900",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 5317,
+					"currencySymbol": "₹ ",
+					"fareS": "5,317",
+					"color": {
+						"red": 0,
+						"green": 176,
+						"blue": 7
+					}
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1400",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674816600",
+				"departTimestamp": "1674808200",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "14:00 - 16:20",
+				"airlineDuration": "02h 20m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1400",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 5955,
+					"currencySymbol": "₹ ",
+					"fareS": "5,955"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0700",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674791100",
+				"departTimestamp": "1674783000",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "07:00 - 09:15",
+				"airlineDuration": "02h 15m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0700",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 5955,
+					"currencySymbol": "₹ ",
+					"fareS": "5,955"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0900",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674798600",
+				"departTimestamp": "1674790200",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "09:00 - 11:20",
+				"airlineDuration": "02h 20m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0900",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 5955,
+					"currencySymbol": "₹ ",
+					"fareS": "5,955"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0800",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674795000",
+				"departTimestamp": "1674786600",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "08:00 - 10:20",
+				"airlineDuration": "02h 20m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0800",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 5955,
+					"currencySymbol": "₹ ",
+					"fareS": "5,955"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1000",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674802500",
+				"departTimestamp": "1674793800",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "10:00 - 12:25",
+				"airlineDuration": "02h 25m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1000",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 5955,
+					"currencySymbol": "₹ ",
+					"fareS": "5,955"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1750",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674830700",
+				"departTimestamp": "1674822000",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "17:50 - 20:15",
+				"airlineDuration": "02h 25m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1750",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 6480,
+					"currencySymbol": "₹ ",
+					"fareS": "6,480"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2230",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674846900",
+				"departTimestamp": "1674838800",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "22:30 - 00:45",
+				"airlineDuration": "02h 15m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2230",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 6480,
+					"currencySymbol": "₹ ",
+					"fareS": "6,480"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2000",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674837600",
+				"departTimestamp": "1674829800",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "20:00 - 22:10",
+				"airlineDuration": "02h 10m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2000",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 6480,
+					"currencySymbol": "₹ ",
+					"fareS": "6,480"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1430_1635",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674823500",
+				"departTimestamp": "1674810000",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "14:30 - 18:15",
+				"airlineDuration": "03h 45m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1430_1635",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 6480,
+					"currencySymbol": "₹ ",
+					"fareS": "6,480"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2120",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674842700",
+				"departTimestamp": "1674834600",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "21:20 - 23:35",
+				"airlineDuration": "02h 15m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2120",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 6480,
+					"currencySymbol": "₹ ",
+					"fareS": "6,480"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1840_1400",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674903300",
+				"departTimestamp": "1674825000",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "18:40 - 16:25",
+				"airlineDuration": "21h 45m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1840_1400",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 6554,
+					"currencySymbol": "₹ ",
+					"fareS": "6,554"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0705_1400",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674816900",
+				"departTimestamp": "1674783300",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "07:05 - 16:25",
+				"airlineDuration": "09h 20m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0705_1400",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 6554,
+					"currencySymbol": "₹ ",
+					"fareS": "6,554"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1535_1915",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674835200",
+				"departTimestamp": "1674813900",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "15:35 - 21:30",
+				"airlineDuration": "05h 55m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1535_1915",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 7194,
+					"currencySymbol": "₹ ",
+					"fareS": "7,194"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0945_1915",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674835200",
+				"departTimestamp": "1674792900",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "09:45 - 21:30",
+				"airlineDuration": "11h 45m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0945_1915",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 7194,
+					"currencySymbol": "₹ ",
+					"fareS": "7,194"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1535_2120",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674841800",
+				"departTimestamp": "1674813900",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "15:35 - 23:20",
+				"airlineDuration": "07h 45m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1535_2120",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 7194,
+					"currencySymbol": "₹ ",
+					"fareS": "7,194"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1655_2120",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674841800",
+				"departTimestamp": "1674818700",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "16:55 - 23:20",
+				"airlineDuration": "06h 25m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1655_2120",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 7194,
+					"currencySymbol": "₹ ",
+					"fareS": "7,194"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1315_1630",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674822900",
+				"departTimestamp": "1674805500",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "13:15 - 18:05",
+				"airlineDuration": "04h 50m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1315_1630",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 7320,
+					"currencySymbol": "₹ ",
+					"fareS": "7,320"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0445_0850",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674793200",
+				"departTimestamp": "1674774900",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "04:45 - 09:50",
+				"airlineDuration": "05h 05m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0445_0850",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 7361,
+					"currencySymbol": "₹ ",
+					"fareS": "7,361"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1330_2120",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674841800",
+				"departTimestamp": "1674806400",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "13:30 - 23:20",
+				"airlineDuration": "09h 50m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1330_2120",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 7457,
+					"currencySymbol": "₹ ",
+					"fareS": "7,457"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1330_1915",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674835200",
+				"departTimestamp": "1674806400",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "13:30 - 21:30",
+				"airlineDuration": "08h | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1330_1915",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 7457,
+					"currencySymbol": "₹ ",
+					"fareS": "7,457"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0555_1235",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674809400",
+				"departTimestamp": "1674779100",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "05:55 - 14:20",
+				"airlineDuration": "08h 25m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0555_1235",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 7497,
+					"currencySymbol": "₹ ",
+					"fareS": "7,497"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0945_1315",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674811500",
+				"departTimestamp": "1674792900",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "09:45 - 14:55",
+				"airlineDuration": "05h 10m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0945_1315",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 8649,
+					"currencySymbol": "₹ ",
+					"fareS": "8,649"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0710_1315",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674811500",
+				"departTimestamp": "1674783600",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "07:10 - 14:55",
+				"airlineDuration": "07h 45m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0710_1315",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 8649,
+					"currencySymbol": "₹ ",
+					"fareS": "8,649"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1015_1320",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674814800",
+				"departTimestamp": "1674794700",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "10:15 - 15:50",
+				"airlineDuration": "05h 35m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1015_1320",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 8859,
+					"currencySymbol": "₹ ",
+					"fareS": "8,859"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1150_2115",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674843000",
+				"departTimestamp": "1674800400",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "11:50 - 23:40",
+				"airlineDuration": "11h 50m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1150_2115",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9126,
+					"currencySymbol": "₹ ",
+					"fareS": "9,126"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1610_0610",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674873600",
+				"departTimestamp": "1674816000",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "16:10 - 08:10",
+				"airlineDuration": "16h | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1610_0610",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9126,
+					"currencySymbol": "₹ ",
+					"fareS": "9,126"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0945_1525",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674820200",
+				"departTimestamp": "1674792900",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "09:45 - 17:20",
+				"airlineDuration": "07h 35m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0945_1525",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9126,
+					"currencySymbol": "₹ ",
+					"fareS": "9,126"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0945_2115",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674843000",
+				"departTimestamp": "1674792900",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "09:45 - 23:40",
+				"airlineDuration": "13h 55m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0945_2115",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9126,
+					"currencySymbol": "₹ ",
+					"fareS": "9,126"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1610_2115",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674843000",
+				"departTimestamp": "1674816000",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "16:10 - 23:40",
+				"airlineDuration": "07h 30m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1610_2115",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9126,
+					"currencySymbol": "₹ ",
+					"fareS": "9,126"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1940_0610",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674873600",
+				"departTimestamp": "1674828600",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "19:40 - 08:10",
+				"airlineDuration": "12h 30m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1940_0610",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9126,
+					"currencySymbol": "₹ ",
+					"fareS": "9,126"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2040_0610",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674873600",
+				"departTimestamp": "1674832200",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "20:40 - 08:10",
+				"airlineDuration": "11h 30m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2040_0610",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9126,
+					"currencySymbol": "₹ ",
+					"fareS": "9,126"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1940_0755",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674880200",
+				"departTimestamp": "1674828600",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "19:40 - 10:00",
+				"airlineDuration": "14h 20m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1940_0755",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9126,
+					"currencySymbol": "₹ ",
+					"fareS": "9,126"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0545_1525",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674820200",
+				"departTimestamp": "1674778500",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "05:45 - 17:20",
+				"airlineDuration": "11h 35m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0545_1525",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9126,
+					"currencySymbol": "₹ ",
+					"fareS": "9,126"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2040_0755",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674880200",
+				"departTimestamp": "1674832200",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "20:40 - 10:00",
+				"airlineDuration": "13h 20m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2040_0755",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9126,
+					"currencySymbol": "₹ ",
+					"fareS": "9,126"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_SG_27012023_ECONOMY_0_0_1_0_0_IN_INR_2000",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674837300",
+				"departTimestamp": "1674829800",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "20:00 - 22:05",
+				"airlineDuration": "02h 05m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "SpiceJet",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_SG_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_SG_27012023_ECONOMY_0_0_1_0_0_IN_INR_2000",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9130,
+					"currencySymbol": "₹ ",
+					"fareS": "9,130"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1055_1525",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674818400",
+				"departTimestamp": "1674797100",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "10:55 - 16:50",
+				"airlineDuration": "05h 55m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1055_1525",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9349,
+					"currencySymbol": "₹ ",
+					"fareS": "9,349"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2130_1315",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674897900",
+				"departTimestamp": "1674835200",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "21:30 - 14:55",
+				"airlineDuration": "17h 25m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2130_1315",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9420,
+					"currencySymbol": "₹ ",
+					"fareS": "9,420"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2130_0815",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674879900",
+				"departTimestamp": "1674835200",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "21:30 - 09:55",
+				"airlineDuration": "12h 25m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2130_0815",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9420,
+					"currencySymbol": "₹ ",
+					"fareS": "9,420"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0500_1515",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674822300",
+				"departTimestamp": "1674775800",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "05:00 - 17:55",
+				"airlineDuration": "12h 55m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0500_1515",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9454,
+					"currencySymbol": "₹ ",
+					"fareS": "9,454"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2115_1515",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674908700",
+				"departTimestamp": "1674834300",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "21:15 - 17:55",
+				"airlineDuration": "20h 40m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2115_1515",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9454,
+					"currencySymbol": "₹ ",
+					"fareS": "9,454"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_SG_27012023_ECONOMY_0_0_1_0_0_IN_INR_1900",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674834000",
+				"departTimestamp": "1674826200",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "19:00 - 21:10",
+				"airlineDuration": "02h 10m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "SpiceJet",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_SG_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_SG_27012023_ECONOMY_0_0_1_0_0_IN_INR_1900",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9656,
+					"currencySymbol": "₹ ",
+					"fareS": "9,656"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1650_0815",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674879900",
+				"departTimestamp": "1674818400",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "16:50 - 09:55",
+				"airlineDuration": "17h 05m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1650_0815",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 9945,
+					"currencySymbol": "₹ ",
+					"fareS": "9,945"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0530_1410",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674816900",
+				"departTimestamp": "1674777600",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "05:30 - 16:25",
+				"airlineDuration": "10h 55m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0530_1410",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 10281,
+					"currencySymbol": "₹ ",
+					"fareS": "10,281"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_SG_27012023_ECONOMY_0_0_1_0_0_IN_INR_0720",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674792300",
+				"departTimestamp": "1674784200",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "07:20 - 09:35",
+				"airlineDuration": "02h 15m | Non-Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "SpiceJet",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_SG_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_SG_27012023_ECONOMY_0_0_1_0_0_IN_INR_0720",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 10600,
+					"currencySymbol": "₹ ",
+					"fareS": "10,600"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1840_0840",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674887100",
+				"departTimestamp": "1674825000",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "18:40 - 11:55",
+				"airlineDuration": "17h 15m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1840_0840",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 11049,
+					"currencySymbol": "₹ ",
+					"fareS": "11,049"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1645_1425",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674906300",
+				"departTimestamp": "1674818100",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "16:45 - 17:15",
+				"airlineDuration": "24h 30m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1645_1425",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 11446,
+					"currencySymbol": "₹ ",
+					"fareS": "11,446"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1645_0805",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674881100",
+				"departTimestamp": "1674818100",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "16:45 - 10:15",
+				"airlineDuration": "17h 30m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1645_0805",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 12783,
+					"currencySymbol": "₹ ",
+					"fareS": "12,783"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0455_2010",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674838500",
+				"departTimestamp": "1674775500",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "04:55 - 22:25",
+				"airlineDuration": "17h 30m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0455_2010",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 12783,
+					"currencySymbol": "₹ ",
+					"fareS": "12,783"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0650_1715",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674831600",
+				"departTimestamp": "1674782400",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "06:50 - 20:30",
+				"airlineDuration": "13h 40m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0650_1715",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 12885,
+					"currencySymbol": "₹ ",
+					"fareS": "12,885"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2015_0930",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674889800",
+				"departTimestamp": "1674830700",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "20:15 - 12:40",
+				"airlineDuration": "16h 25m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_2015_0930",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 13095,
+					"currencySymbol": "₹ ",
+					"fareS": "13,095"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1645_0930",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674889800",
+				"departTimestamp": "1674818100",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "16:45 - 12:40",
+				"airlineDuration": "19h 55m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1645_0930",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 13095,
+					"currencySymbol": "₹ ",
+					"fareS": "13,095"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1210_1715",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674831600",
+				"departTimestamp": "1674801600",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "12:10 - 20:30",
+				"airlineDuration": "08h 20m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1210_1715",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 13095,
+					"currencySymbol": "₹ ",
+					"fareS": "13,095"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0830_2040",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674837300",
+				"departTimestamp": "1674788400",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "08:30 - 22:05",
+				"airlineDuration": "13h 35m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0830_2040",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 14251,
+					"currencySymbol": "₹ ",
+					"fareS": "14,251"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0455_2040",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674837300",
+				"departTimestamp": "1674775500",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "04:55 - 22:05",
+				"airlineDuration": "17h 10m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_0455_2040",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 14251,
+					"currencySymbol": "₹ ",
+					"fareS": "14,251"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		},
+		{
+			"segmentId": "DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1505_2035",
+			"onwardSegmentDetails": {
+				"arrivalTime": "",
+				"departTime": "",
+				"arrivalTimestamp": "1674840300",
+				"departTimestamp": "1674812100",
+				"duration": "",
+				"stops": "",
+				"airlineCode": "",
+				"sourceAirportCode": {
+					"iataCode": "DEL",
+					"city": "New Delhi",
+					"name": "Indira Gandhi International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"destinationAirportCode": {
+					"iataCode": "BOM",
+					"city": "Mumbai",
+					"name": "Chhatrapati Shivaji International Airport",
+					"countryCode": "",
+					"iconUrl": ""
+				},
+				"airlineTime": "15:05 - 22:55",
+				"airlineDuration": "07h 50m | 1 Stop",
+				"segmentAirlineInfos": [
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					},
+					{
+						"airlineName": "Air India",
+						"airlineIconUrl": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/v2/airlines/flights_AI_xxhdpi.png"
+					}
+				]
+			},
+			"refundable": false,
+			"hasFreeMeal": false,
+			"handBaggageOnlyFare": false,
+			"fareList": [
+				{
+					"fareId": "2_DEL_BOM_AI_27012023_ECONOMY_0_0_1_0_0_IN_INR_1505_2035",
+					"partnerId": 0,
+					"partnerName": "",
+					"fare": 14324,
+					"currencySymbol": "₹ ",
+					"fareS": "14,324"
+				}
+			],
+			"specialFeatures": [
+				{
+					"title": "Free Meals",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/filters/meals_flight_icon_xxxhdpi.png"
+				},
+				{
+					"title": "Refundable",
+					"icon": "https://nucleistorage.blob.core.windows.net/nucleicontainer/image-pub/flights/refundable_xxxhdpi.png"
+				}
+			]
+		}
+	],
+	"returnFlights": [],
+	"isRoundTrip": false,
+	"onwardFareCalendar": [],
+	"quickFilters": [
+		{
+			"id": 1,
+			"title": "Non Stop",
+			"filterType": "NO_OF_STOPS",
+			"filterValue": "0",
+			"isSelected": false,
+			"appliedOn": "ONWARD"
+		},
+		{
+			"id": 3,
+			"title": "Morning Departure",
+			"filterType": "DEPARTURE_TIME",
+			"filterValue": "MORNING",
+			"isSelected": false,
+			"appliedOn": "ONWARD"
+		},
+		{
+			"id": 6,
+			"title": "Air India",
+			"filterType": "AIRLINES",
+			"filterValue": "AI",
+			"isSelected": false,
+			"appliedOn": "ONWARD"
+		},
+		{
+			"id": 6,
+			"title": "Spice Jet",
+			"filterType": "AIRLINES",
+			"filterValue": "SG",
+			"isSelected": false,
+			"appliedOn": "ONWARD"
+		},
+		{
+			"id": 3,
+			"title": "Late Departures",
+			"filterType": "DEPARTURE_TIME",
+			"filterValue": "NIGHT",
+			"isSelected": false,
+			"appliedOn": "ONWARD"
+		}
+	],
+	"minimumTimeGapForRoundTrip": "14400",
+	"isInternational": false,
+	"warningMessages": [
+		{
+			"key": "ONE_WAY_JOURNEY",
+			"value": "\u003chtml\u003e\u003cbody\u003e\u003cp\u003eYou searched for flight from %s(%s) to %s(%s). But the selected flight is from \u003cb\u003e%s(%s)\u003c/b\u003e to \u003cb\u003e%s(%s)\u003c/b\u003e\u003c/p\u003e\u003c/body\u003e\u003c/html\u003e"
+		}
+	]
+}

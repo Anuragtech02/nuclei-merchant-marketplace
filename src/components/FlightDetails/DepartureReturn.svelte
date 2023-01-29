@@ -5,14 +5,16 @@
 	const { subscribe, update } = GlobalStore;
 	let departureDate = '';
 	let returnDate = '';
+	let departureDateLocal: any = {};
+	let returnDateLocal: any = {};
 
 	subscribe((value) => {
-		departureDate = value.departureDate;
-		returnDate = value.returnDate;
+		departureDate = value.searchRequest.departDate;
+		returnDate = value.searchRequest.returnDate;
 	});
 
-	$: departureDateLocal = getDateDayAndMonth(departureDate);
-	$: returnDateLocal = getDateDayAndMonth(returnDate);
+	$: departureDate, (departureDateLocal = getDateDayAndMonth(departureDate));
+	$: returnDate, (returnDateLocal = getDateDayAndMonth(returnDate));
 </script>
 
 <Card classes="flex justify-between">

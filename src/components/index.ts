@@ -6,3 +6,4 @@ export { default as Counter } from './Counter.svelte';
 export { default as SourceDestination } from './FlightDetails/SourceDestination.svelte';
 export { default as ClassTravellers } from './FlightDetails/ClassTravellers.svelte';
 export { default as DepartureReturn } from './FlightDetails/DepartureReturn.svelte';
+export { default as FlightDetails } from './FlightDetails/index.svelte';
