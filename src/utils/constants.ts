@@ -1,4 +1,5 @@
-// List of all indian cities with their airport codes
+import citiesWithNames from './mock/cities.json';
+
 export const CITIES = [
 	{ name: 'Ahmedabad', code: 'AMD' },
 	{ name: 'Agra', code: 'AGR' },
@@ -119,6 +120,14 @@ export const CITIES = [
 	{ name: 'Yavatmal', code: 'YTL' },
 	{ name: 'Yavatmal', code: 'YTL' }
 ];
+
+export const CITIES_WITH_NAMES = citiesWithNames.airports.map((city, i) => ({
+	city: city.city_name,
+	iataCode: city.IATA_code,
+	name: city.airport_name,
+	id: 'ID' + i,
+	createdAt: new Date().toISOString()
+}));
 
 export const TRAVEL_CLASS_OPTIONS: string[] = ['Economy', 'Premium Economy', 'Business', 'First'];
 

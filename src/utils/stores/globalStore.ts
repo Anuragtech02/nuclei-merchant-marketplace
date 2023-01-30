@@ -13,9 +13,12 @@ const defaultGlobalState = {
 	recentSearches: defaultRecentSearches
 };
 
-export interface IRecentSearch extends ISearchRequest {
+export interface IRecentSearch {
 	id: string; // ISO Date String
 	createdAt: string; // ISO Date String
+	city: string;
+	iataCode: string;
+	name: string;
 }
 
 export interface IGlobalStoreData {

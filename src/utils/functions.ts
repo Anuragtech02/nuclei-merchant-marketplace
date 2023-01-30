@@ -9,10 +9,24 @@ export function getDateDayAndMonth(dateStr: string) {
 	const date = dateObj.getDate();
 	const month = dateObj.toLocaleString('default', { month: 'short' });
 	const day = dateObj.toLocaleString('default', { weekday: 'short' });
-	console.log({ dateStr, date, month, day });
 	return {
 		date,
 		month,
 		day
 	};
 }
+
+export const debounce = <F extends (...args: Parameters<F>) => ReturnType<F>>(
+	fn: F,
+	delay: number
+) => {
+	let timeout: ReturnType<typeof setTimeout>;
+	return function (...args: Parameters<F>) {
+		clearTimeout(timeout);
+		timeout = setTimeout(() => {
+			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+			// @ts-ignore
+			fn.apply(this, args);
+		}, delay);
+	};
+};

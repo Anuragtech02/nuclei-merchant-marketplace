@@ -4,6 +4,7 @@
 	import { getCityByCode } from '../../utils/functions';
 	import Card from '../Card.svelte';
 	import type { ILocationObj, ISearchRequest } from '../../utils/interfaces';
+	import { goto } from '$app/navigation';
 	const { subscribe, update } = GlobalStore;
 	let searchRequest: ISearchRequest = {} as any;
 	let source: ILocationObj = {} as any;
@@ -28,14 +29,30 @@
 		</div>
 	</div>
 	<div class={`flex-1 h-[${FLIGHT_DETAILSL_HEIGHT}px] flex flex-col justify-between`}>
-		<div class="flex justify-start">
+		<div
+			class="flex justify-start"
+			on:click={() => goto('/flights/search-query/source')}
+			on:keydown={(e) => {
+				if (e.key === 'Enter') {
+					goto('/flights/search-query/source');
+				}
+			}}
+		>
 			<span class="border-solid border-2 px-2 py-1 border-radius rounded-md text-[9px]">
 				{source?.iataCode}
 			</span>
 			<p class="ml-2">{source?.city}</p>
 		</div>
 		<hr class="border-dashed border-[#606574] my-2" />
-		<div class="flex justify-start">
+		<div
+			class="flex justify-start"
+			on:click={() => goto('/flights/search-query/des')}
+			on:keydown={(e) => {
+				if (e.key === 'Enter') {
+					goto('/flights/search-query/des');
+				}
+			}}
+		>
 			<span class="border-solid border-2 px-2 py-1 border-radius rounded-md text-[9px]">
 				{destination?.iataCode}
 			</span>

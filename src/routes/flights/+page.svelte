@@ -1,55 +1,13 @@
 <script lang="ts">
 	import { Appbar, Card, FlightDetails } from '../../components';
-	import { onMount } from 'svelte';
 	import GlobalStore from '../../utils/stores/globalStore';
-	import { getHomeData, getUpcomingBookings, getWalletData } from '../../utils/api/services';
 	import type { IBooking } from '../../utils/interfaces';
-	const { subscribe, update } = GlobalStore;
+	const { subscribe } = GlobalStore;
 	let balance: number = 0;
 	let upcomingBookings: IBooking[] = [];
 
 	subscribe((value) => {
 		upcomingBookings = value.upcomingBookings;
-	});
-
-	async function fetchWallet() {
-		try {
-			const res = await getWalletData();
-			balance = res.data.walletDetails.walletTotalBalance;
-			update((value) => {
-				return { ...value, balance: res.data.walletDetails.walletTotalBalance };
-			});
-		} catch (error: any) {
-			console.log('ERR_fetchWalletR_', error);
-		}
-	}
-
-	async function fetchUpcomingBookings() {
-		try {
-			const res = await getUpcomingBookings();
-			update((value) => {
-				return { ...value, upcomingBookings: res.data.booking };
-			});
-		} catch (error: any) {
-			console.log('ERROR_fetchUpcomingBookiror', error);
-		}
-	}
-
-	async function fetchHomeData() {
-		try {
-			const res = await getHomeData();
-			update((value) => {
-				return { ...value, searchRequest: res.data.searchRequest };
-			});
-		} catch (error: any) {
-			console.log('ERROR_fetchHomeData', error);
-		}
-	}
-
-	onMount(() => {
-		fetchWallet();
-		fetchUpcomingBookings();
-		fetchHomeData();
 	});
 </script>
 
@@ -66,12 +24,13 @@
 		</button>
 	</div>
 </Appbar>
+
 <section class="w-full max-w-screen-sm mx-auto mt-6 sm:px-2">
 	<FlightDetails />
 	<div class="mt-6">
 		<div class="flex justify-between items-center">
 			<h4>Upcoming Bookings</h4>
-			<a class="link link-hover text-sm text-primary" href="/">View All</a>
+			<a class="link link-hover text-sm text-primary" href="/flights">View All</a>
 		</div>
 		<div class="carousel w-full max-w-full space-x-4">
 			{#each upcomingBookings as booking}
