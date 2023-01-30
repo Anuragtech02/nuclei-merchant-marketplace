@@ -9,14 +9,11 @@
 	import SearchItem from './SearchItem.svelte';
 
 	const { subscribe, update } = GlobalStore;
+	// get parameters from route
+	const { type: searchType } = $page.params;
 
 	let src: any = {};
 	let des: any = {};
-
-	subscribe((value) => {
-		src = value.searchRequest.src;
-		des = value.searchRequest.des;
-	});
 
 	let pageTitle = 'Search City';
 	let searchText: string = '';
@@ -25,12 +22,10 @@
 	let alertText: string = '';
 	const DEBOUNCE_TIMEOUT = 500;
 
-	// get parameters from route
-	const { type: searchType } = $page.params;
-
-	$: searchType === 'source'
-		? (pageTitle = 'Search Source City')
-		: (pageTitle = 'Search Destination City');
+	subscribe((value) => {
+		src = value.searchRequest.src;
+		des = value.searchRequest.des;
+	});
 
 	// debounced search function
 	const searchCity = debounce((searchText: string) => {
@@ -47,8 +42,6 @@
 			popularCities = CITIES_WITH_NAMES;
 		}
 	}, DEBOUNCE_TIMEOUT);
-
-	$: searchText, searchCity(searchText);
 
 	function handleClickSearchItem(item: IRecentSearch) {
 		let { city, iataCode, name } = item;
@@ -85,6 +78,10 @@
 		goto('/flights');
 	}
 
+	$: searchType === 'source'
+		? (pageTitle = 'Search Source City')
+		: (pageTitle = 'Search Destination City');
+	$: searchText, searchCity(searchText);
 	$: alertText &&
 		setTimeout(() => {
 			alertText = '';

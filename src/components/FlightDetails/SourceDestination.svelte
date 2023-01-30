@@ -10,12 +10,21 @@
 	let source: ILocationObj = {} as any;
 	let destination: ILocationObj = {} as any;
 
-	$: searchRequest, (source = searchRequest?.src);
-	$: searchRequest, (destination = searchRequest?.des);
+	function handleSwapSourceAndDestination() {
+		update((value) => {
+			const temp = value.searchRequest.src;
+			value.searchRequest.src = value.searchRequest.des;
+			value.searchRequest.des = temp;
+			return value;
+		});
+	}
 
 	subscribe((value) => {
 		searchRequest = value.searchRequest;
 	});
+
+	$: searchRequest, (source = searchRequest?.src);
+	$: searchRequest, (destination = searchRequest?.des);
 </script>
 
 <Card classes="flex justify-between items-center gap-2">
@@ -60,7 +69,10 @@
 		</div>
 	</div>
 	<div>
-		<button class="btn bg-transparent border-none p-0 py-0 hover:bg-transparent">
+		<button
+			class="btn bg-transparent border-none p-0 py-0 hover:bg-transparent"
+			on:click={handleSwapSourceAndDestination}
+		>
 			<img src="icons/swap.svg" alt="swap" />
 		</button>
 	</div>
