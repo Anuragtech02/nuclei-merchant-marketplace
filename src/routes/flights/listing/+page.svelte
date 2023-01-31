@@ -44,16 +44,17 @@
 		(travellerCount =
 			parseInt(params.adultCount) + parseInt(params.childCount) + parseInt(params.infantCount));
 
-	// date to internationl time
-	function get24HourTime(date: string) {
-		const d = new Date(parseInt(date));
-		const hours = d.getHours();
-		const minutes = d.getMinutes();
-		const ampm = hours >= 12 ? 'pm' : 'am';
-		const hours12 = hours % 12;
-		const hours12String = hours12 ? hours12.toString() : '12';
-		const minutesString = minutes < 10 ? '0' + minutes.toString() : minutes.toString();
-		return hours12String + ':' + minutesString + ' ' + ampm;
+	function searchFlightsUsingQuery(): IOnwardFlight[] {
+		let tempFlights: IOnwardFlight[] = [];
+		if (params?.src && params?.des) {
+			tempFlights = flights.filter((flight) => {
+				return (
+					flight.onwardSegmentDetails?.sourceAirportCode?.iataCode === params?.src &&
+					flight.onwardSegmentDetails.destinationAirportCode?.iataCode === params?.des
+				);
+			});
+		}
+		return tempFlights;
 	}
 </script>
 
@@ -89,7 +90,7 @@
 	{/if}
 	{#if flights.length > 0}
 		<ul class="pt-4">
-			{#each flights as flight}
+			{#each searchFlightsUsingQuery() as flight}
 				<li class="my-4">
 					<div class="flex justify-between">
 						<div>
