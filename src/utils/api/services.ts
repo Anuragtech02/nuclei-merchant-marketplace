@@ -1,8 +1,13 @@
-import type { IHomeData, IUpcomingBookingsResponse, IWalletResponse } from '../interfaces';
+import type {
+	IHomeData,
+	IListingData,
+	IUpcomingBookingsResponse,
+	IWalletResponse
+} from '../interfaces';
 import API from './config';
 
 function getListingData() {
-	return API.get('/listingMock_NwIjYH5pS.json');
+	return API.get<IListingData>('/listingMock_NwIjYH5pS.json');
 }
 
 function getHomeData() {

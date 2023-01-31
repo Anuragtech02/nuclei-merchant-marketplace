@@ -135,3 +135,95 @@ export interface IHomeData {
 	searchRequest: ISearchRequest;
 	categorySdkConfig: CategorySdkConfig;
 }
+
+export interface ISourceAirportCode {
+	iataCode: string;
+	city: string;
+	name: string;
+	countryCode: string;
+	iconUrl: string;
+}
+
+export interface IDestinationAirportCode {
+	iataCode: string;
+	city: string;
+	name: string;
+	countryCode: string;
+	iconUrl: string;
+}
+
+export interface ISegmentAirlineInfo {
+	airlineName: string;
+	airlineIconUrl: string;
+}
+
+export interface IOnwardSegmentDetails {
+	arrivalTime: string;
+	departTime: string;
+	arrivalTimestamp: string;
+	departTimestamp: string;
+	duration: string;
+	stops: string;
+	airlineCode: string;
+	sourceAirportCode: ISourceAirportCode;
+	destinationAirportCode: IDestinationAirportCode;
+	airlineTime: string;
+	airlineDuration: string;
+	segmentAirlineInfos: ISegmentAirlineInfo[];
+}
+
+export interface IColor {
+	red: number;
+	green: number;
+	blue: number;
+}
+
+export interface IFareList {
+	fareId: string;
+	partnerId: number;
+	partnerName: string;
+	fare: number;
+	currencySymbol: string;
+	fareS: string;
+	color: IColor;
+}
+
+export interface ISpecialFeature {
+	title: string;
+	icon: string;
+}
+
+export interface IOnwardFlight {
+	segmentId: string;
+	onwardSegmentDetails: IOnwardSegmentDetails;
+	refundable: boolean;
+	hasFreeMeal: boolean;
+	handBaggageOnlyFare: boolean;
+	fareList: IFareList[];
+	specialFeatures: ISpecialFeature[];
+}
+
+export interface IQuickFilter {
+	id: number;
+	title: string;
+	filterType: string;
+	filterValue: string;
+	isSelected: boolean;
+	appliedOn: string;
+}
+
+export interface IWarningMessage {
+	key: string;
+	value: string;
+}
+
+export interface IListingData {
+	onwardFlights: IOnwardFlight[];
+	returnFlights: any[];
+	isRoundTrip: boolean;
+	onwardFareCalendar: any[];
+	quickFilters: IQuickFilter[];
+	minimumTimeGapForRoundTrip: string;
+	isInternational: boolean;
+	warningMessages: IWarningMessage[];
+}
