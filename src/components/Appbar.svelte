@@ -24,3 +24,9 @@
 		<slot name="extras" />
 	</div>
 </nav>
+
+<style>
+	nav {
+		z-index: 100;
+	}
+</style>
