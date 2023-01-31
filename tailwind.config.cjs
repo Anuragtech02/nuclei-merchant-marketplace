@@ -9,6 +9,9 @@ module.exports = {
 				},
 				bg: {
 					DEFAULT: '#F0F0F5'
+				},
+				accent: {
+					DEFAULT: '#1BA4F7'
 				}
 			}
 		}

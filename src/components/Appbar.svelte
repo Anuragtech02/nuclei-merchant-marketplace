@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	export let title: string = '';
 	export let backLink: string = '';
-	export let customTitleComp: any = null;
+	export let customTitleComp: boolean = false;
 
 	function getBackLink() {
 		return $page.url.pathname.substring(0, $page.url.pathname.lastIndexOf('/'));
@@ -16,7 +16,7 @@
 				<img src="/icons/back.svg" alt="back" class="w-4 h-3" />
 			</a>
 			{#if customTitleComp}
-				<svelte:component this={customTitleComp} />
+				<slot name="customTitleComp" />
 			{:else}
 				<p class="ml-3">{title}</p>
 			{/if}
