@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getDateDayAndMonth } from '../../../utils/functions';
+	import { getDateDayAndMonth } from '../../../../utils/functions';
 
 	export let src: string;
 	export let des: string;

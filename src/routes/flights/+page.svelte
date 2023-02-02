@@ -25,7 +25,7 @@
 	</div>
 </Appbar>
 
-<section class="w-full max-w-screen-sm mx-auto mt-6 sm:px-2">
+<section class="w-full max-w-screen-sm mx-auto mt-6 sm:px-2 pt-2">
 	<FlightDetails />
 	<div class="mt-6">
 		<div class="flex justify-between items-center">

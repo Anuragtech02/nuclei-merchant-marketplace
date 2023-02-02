@@ -30,11 +30,11 @@
 <Card classes="flex justify-between items-center gap-2">
 	<div class={`flex flex-col items-center justify-between h-[${FLIGHT_DETAILSL_HEIGHT}px] gap-1`}>
 		<div>
-			<img src="icons/dot.svg" alt="dot" />
+			<img src="/icons/dot.svg" alt="dot" />
 		</div>
 		<div class="w-[1px] bg-black flex-1" />
 		<div>
-			<img src="icons/plane.svg" alt="airplane" />
+			<img src="/icons/plane.svg" alt="airplane" />
 		</div>
 	</div>
 	<div class={`flex-1 h-[${FLIGHT_DETAILSL_HEIGHT}px] flex flex-col justify-between`}>
@@ -73,7 +73,7 @@
 			class="btn bg-transparent border-none p-0 py-0 hover:bg-transparent"
 			on:click={handleSwapSourceAndDestination}
 		>
-			<img src="icons/swap.svg" alt="swap" />
+			<img src="/icons/swap.svg" alt="swap" />
 		</button>
 	</div>
 </Card>

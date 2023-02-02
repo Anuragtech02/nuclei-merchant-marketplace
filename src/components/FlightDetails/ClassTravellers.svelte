@@ -36,7 +36,7 @@
 			<span>Class</span>
 			<div>
 				<p>{travelClass}</p>
-				<img src="icons/arrow-down.svg" alt="arrow-down" class="w-4 h-3" />
+				<img src="/icons/arrow-down.svg" alt="arrow-down" class="w-4 h-3" />
 			</div>
 		</label>
 		<div class="divider divider-horizontal" />
@@ -44,7 +44,7 @@
 			<span>Traveller{'(s)'}</span>
 			<div>
 				<p>{travellers}</p>
-				<img src="icons/arrow-down.svg" alt="arrow-down" class="w-4 h-3" />
+				<img src="/icons/arrow-down.svg" alt="arrow-down" class="w-4 h-3" />
 			</div>
 		</label>
 	</div>

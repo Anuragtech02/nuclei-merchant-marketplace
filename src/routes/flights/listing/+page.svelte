@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-	import { Appbar } from '../../../components';
+	import { Appbar, BottomSheet, FlightDetails } from '../../../components';
 	import { getListingData } from '../../../utils/api/services';
 	import { getCityByCode } from '../../../utils/functions';
 	import type { IListingData, IOnwardFlight } from '../../../utils/interfaces';
-	import CustomTitleComp from './CustomTitleComp.svelte';
+	import CustomTitleComp from './components/CustomTitleComp.svelte';
+	import SortAndFilter from './components/SortAndFilter.svelte';
 
 	let travellerCount = 0;
 	let isLoading = true;
@@ -70,11 +71,21 @@
 		/>
 	</div>
 	<div slot="extras">
-		<button class="btn bg-accent hover:bg-accent btn-sm btn-square">
+		<label for="modify-search" class="btn bg-accent hover:bg-accent btn-sm btn-square">
 			<img src="/icons/edit.svg" alt="edit" />
-		</button>
+		</label>
 	</div>
 </Appbar>
+
+<BottomSheet
+	id="modify-search"
+	modalClasses="flex flex-col justify-start"
+	classes="rounded-none rounded-b-xl"
+	type="top"
+	title="Modify Search"
+>
+	<FlightDetails />
+</BottomSheet>
 
 <section class="mt-[80px]">
 	{#if isLoading}
@@ -134,6 +145,20 @@
 		</ul>
 	{/if}
 </section>
+
+<SortAndFilter />
+
+<footer class="fixed bottom-0 left-0 w-full bg-[#E8E8EF] h-16">
+	<div class="max-w-[sm] mx-auto">
+		<label
+			for="sort-filters"
+			class="btn btn-ghost hover:bg-accent rounded-none absolute right-0 h-full bg-accent flex flex-col drop-shadow-xl"
+		>
+			<img src="/icons/tweaks.svg" alt="filters" />
+			<span class="text-white capitalize font-normal text-xs mt-2">Sort & Filters</span>
+		</label>
+	</div>
+</footer>
 
 <style>
 	/* skeleteon loading animation */

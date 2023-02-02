@@ -27,10 +27,6 @@
 			alertMessage = 'Please select a departure date';
 			return;
 		}
-		if (!searchRequest.returnDate) {
-			alertMessage = 'Please select a return date';
-			return;
-		}
 		if (!searchRequest.adultCount) {
 			alertMessage = 'Please select at least one adult';
 			return;
@@ -40,6 +36,8 @@
 			return;
 		}
 	}
+
+	// adult + children = 9 and infants <= adults
 
 	function handleClickSearch() {
 		validateFields();
@@ -63,13 +61,14 @@
 			'&isNonStop=' +
 			isNonStopChecked;
 
-		goto(`/flights/listing${searchQuery}`);
+		goto(`/flights/listing${searchQuery}`, { replaceState: true });
 	}
 </script>
 
 <SourceDestination />
 <DepartureReturn />
 <ClassTravellers />
+
 <div>
 	<label for="non-stop" class="flex justify-start items-center">
 		<input
