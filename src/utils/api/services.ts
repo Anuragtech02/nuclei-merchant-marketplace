@@ -4,22 +4,45 @@ import type {
 	IUpcomingBookingsResponse,
 	IWalletResponse
 } from '../interfaces';
-import API from './config';
+import { API_COMMON, API_FLIGHT_TICKET, API_LISTING, API_LANDING } from './config';
+import type { IListingPageSearchBody } from './RequestBodyInterfaces';
 
-function getListingData() {
-	return API.get<IListingData>('/listingMock_NwIjYH5pS.json');
+function getListingData(body: IListingPageSearchBody) {
+	return API_LISTING.post<IListingData>('/GetFlightsSearchListV2', body);
 }
 
 function getHomeData() {
-	return API.get<IHomeData>('/home_dYK52B_1B.json');
+	return API_LANDING.post<IHomeData>('/getConfig');
 }
 
 function getUpcomingBookings() {
-	return API.get<IUpcomingBookingsResponse>('/upcomingBookings_MXqcdQN6I.json');
+	return API_FLIGHT_TICKET.post<IUpcomingBookingsResponse>('/GetAllBookings');
 }
 
 function getWalletData() {
-	return API.get<IWalletResponse>('/wallet_cEEHpgpWm3.json');
+	return API_COMMON.post<IWalletResponse>('/GetUserWallet');
 }
 
-export { getListingData, getHomeData, getUpcomingBookings, getWalletData };
+function getPopularCities() {
+	return API_LANDING.post('/getPopularCities');
+}
+
+function searchCity(searchText: string) {
+	return API_LANDING.post('/getAirportSearchResults', {
+		searchText
+	});
+}
+
+function getFilteredFlights(body: IListingPageSearchBody) {
+	return API_LISTING.post('/FetchFlightSortFilters', body);
+}
+
+export {
+	getListingData,
+	getHomeData,
+	getUpcomingBookings,
+	getWalletData,
+	getPopularCities,
+	searchCity,
+	getFilteredFlights
+};

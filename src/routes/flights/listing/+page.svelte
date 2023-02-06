@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import { Appbar, BottomSheet, FlightDetails } from '../../../components';
 	import { getListingData } from '../../../utils/api/services';
-	import { getCityByCode } from '../../../utils/functions';
+	import { formatDate, getCityByCode } from '../../../utils/functions';
 	import type { IListingData, IOnwardFlight } from '../../../utils/interfaces';
 	import CustomTitleComp from './components/CustomTitleComp.svelte';
 	import SortAndFilter from './components/SortAndFilter/SortAndFilter.svelte';
@@ -39,7 +39,36 @@
 	async function fetchListingData() {
 		isLoading = true;
 		try {
-			const res = await getListingData();
+			const res = await getListingData({
+				src: {
+					iataCode: params?.src,
+					city: String(getCityByCode(params?.src)),
+					countryCode: 'IN'
+				},
+				des: {
+					iataCode: params?.des,
+					city: String(getCityByCode(params?.des)),
+					countryCode: 'IN'
+				},
+				departDate: formatDate(params?.departDate),
+				passenger: {
+					adultCount: parseInt(params?.adultCount),
+					childCount: parseInt(params?.childCount),
+					infantCount: parseInt(params?.infantCount)
+				},
+				travellerClass: {
+					key: params?.travellerClass,
+					value: params?.travellerClass
+				},
+				appliedSortFilter: [
+					{
+						tabId: 'ONWARD',
+						sortId: '1',
+						filtersList: []
+					}
+				],
+				partnerCountry: 'IN'
+			});
 			listingData = res.data;
 			flights = listingData.onwardFlights;
 		} catch (error) {

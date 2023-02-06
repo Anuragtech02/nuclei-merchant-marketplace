@@ -30,3 +30,12 @@ export const debounce = <F extends (...args: Parameters<F>) => ReturnType<F>>(
 		}, delay);
 	};
 };
+
+// format date string to dd-mm-yyyy
+export function formatDate(date: string) {
+	const dateObj = new Date(parseInt(date));
+	const dateNum = dateObj.getDate();
+	const month = dateObj.getMonth() + 1;
+	const year = dateObj.getFullYear();
+	return `${dateNum}-${month}-${year}`;
+}
