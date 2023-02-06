@@ -6,7 +6,19 @@
 	import { getCityByCode } from '../../../utils/functions';
 	import type { IListingData, IOnwardFlight } from '../../../utils/interfaces';
 	import CustomTitleComp from './components/CustomTitleComp.svelte';
-	import SortAndFilter from './components/SortAndFilter.svelte';
+	import SortAndFilter from './components/SortAndFilter/SortAndFilter.svelte';
+
+	interface IParams {
+		adultCount: string;
+		childCount: string;
+		departDate: string;
+		des: string;
+		infantCount: string;
+		isNonStop: string;
+		returnDate: string;
+		src: string;
+		travellerClass: string;
+	}
 
 	let travellerCount = 0;
 	let isLoading = true;
@@ -14,9 +26,10 @@
 	// extract all params from query in URL
 	let searchParams = $page.url.searchParams;
 
-	const params = {} as any;
+	const params: IParams = {} as IParams;
 
-	searchParams?.forEach((value, key) => {
+	searchParams?.forEach((value: any, key: any) => {
+		// @ts-ignore
 		params[key] = value;
 	});
 
@@ -146,7 +159,10 @@
 	{/if}
 </section>
 
-<SortAndFilter />
+<SortAndFilter
+	sourceName={String(getCityByCode(params.src))}
+	preferredAirlinesOptions={[{ name: 'Air India', code: 'AI', icon: '/icons/meals.svg' }]}
+/>
 
 <footer class="fixed bottom-0 left-0 w-full bg-[#E8E8EF] h-16">
 	<div class="max-w-[sm] mx-auto">
