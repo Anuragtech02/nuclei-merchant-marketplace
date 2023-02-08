@@ -40,9 +40,12 @@
 	}
 
 	onMount(() => {
-		fetchWallet();
-		fetchUpcomingBookings();
-		fetchHomeData();
+		const allPromises = [fetchWallet(), fetchUpcomingBookings(), fetchHomeData()];
+		Promise.all(allPromises).then(() => {
+			update((value) => {
+				return { ...value, isLoading: false };
+			});
+		});
 	});
 </script>
 

@@ -10,7 +10,8 @@ const defaultRecentSearches: IRecentSearch[] = [];
 const defaultGlobalState = {
 	searchRequest: defaultFlightDetails,
 	upcomingBookings: defaultUpcomingBookings,
-	recentSearches: defaultRecentSearches
+	recentSearches: defaultRecentSearches,
+	isLoading: true
 };
 
 export interface IRecentSearch {
@@ -25,6 +26,7 @@ export interface IGlobalStoreData {
 	searchRequest: ISearchRequest;
 	upcomingBookings: IBooking[];
 	recentSearches: IRecentSearch[];
+	isLoading: boolean;
 }
 
 interface IGlobalStore {

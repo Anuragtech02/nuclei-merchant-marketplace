@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { BottomSheet, Counter } from '..';
+	import { BottomSheet, Counter, SkeletonLoading } from '..';
 	import { TRAVEL_CLASS_OPTIONS, travellersOptions } from '../../utils/constants';
 	import { GlobalStore } from '../../utils/stores/globalStore';
 	import Card from '../Card.svelte';
@@ -11,12 +11,14 @@
 	let children = 0;
 	let infants = 0;
 	let maxTravellerDisabled = false;
+	let isLoading = true;
 
 	subscribe((value) => {
 		travelClass = value.searchRequest.travellerClass;
 		adults = value.searchRequest.adultCount;
 		children = value.searchRequest.childCount;
 		infants = value.searchRequest.infantCount;
+		isLoading = value.isLoading;
 	});
 
 	function getAvailableTravellers() {
@@ -31,23 +33,27 @@
 </script>
 
 <Card>
-	<div class="custom-tc-container flex justify-between [&>label]:flex-1">
-		<label for="traveller-class">
-			<span>Class</span>
-			<div>
-				<p>{travelClass}</p>
-				<img src="/icons/arrow-down.svg" alt="arrow-down" class="w-4 h-3" />
-			</div>
-		</label>
-		<div class="divider divider-horizontal" />
-		<label for="traveller-class">
-			<span>Traveller{'(s)'}</span>
-			<div>
-				<p>{travellers}</p>
-				<img src="/icons/arrow-down.svg" alt="arrow-down" class="w-4 h-3" />
-			</div>
-		</label>
-	</div>
+	{#if isLoading}
+		<SkeletonLoading length="short" />
+	{:else}
+		<div class="custom-tc-container flex justify-between [&>label]:flex-1">
+			<label for="traveller-class">
+				<span>Class</span>
+				<div>
+					<p>{travelClass}</p>
+					<img src="/icons/arrow-down.svg" alt="arrow-down" class="w-4 h-3" />
+				</div>
+			</label>
+			<div class="divider divider-horizontal" />
+			<label for="traveller-class">
+				<span>Traveller{'(s)'}</span>
+				<div>
+					<p>{travellers}</p>
+					<img src="/icons/arrow-down.svg" alt="arrow-down" class="w-4 h-3" />
+				</div>
+			</label>
+		</div>
+	{/if}
 
 	<BottomSheet id="traveller-class">
 		<div>

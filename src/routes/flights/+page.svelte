@@ -1,13 +1,15 @@
 <script lang="ts">
-	import { Appbar, Card, FlightDetails } from '../../components';
+	import { Appbar, Card, FlightDetails, SkeletonLoading } from '../../components';
 	import GlobalStore from '../../utils/stores/globalStore';
 	import type { IBooking } from '../../utils/interfaces';
 	const { subscribe } = GlobalStore;
 	let balance: number = 0;
 	let upcomingBookings: IBooking[] = [];
+	let isLoading = true;
 
 	subscribe((value) => {
 		upcomingBookings = value.upcomingBookings;
+		isLoading = value.isLoading;
 	});
 </script>
 
@@ -30,24 +32,36 @@
 	<div class="mt-6">
 		<div class="flex justify-between items-center">
 			<h4>Upcoming Bookings</h4>
-			<a class="link link-hover text-sm text-primary" href="/flights">View All</a>
+			{#if upcomingBookings.length > 0}
+				<a class="link link-hover text-sm text-primary" href="/flights">View All</a>
+			{/if}
 		</div>
-		<div class="carousel w-full max-w-full space-x-4">
-			{#each upcomingBookings as booking}
-				<Card classes="carousel-item flex items-center py-4">
-					<div class="avatar">
-						<div class="w-16 h-16 rounded">
-							<img src={booking.imageUrl} alt={booking.title} />
+		{#if isLoading}
+			<div class="my-2">
+				<SkeletonLoading showImage imageShape="square" length="short" bordered />
+			</div>
+		{:else if upcomingBookings.length === 0}
+			<div class="flex justify-center items-center h-[200px]">
+				<p class="text-center text-sm text-stone-500">No upcoming bookings</p>
+			</div>
+		{:else}
+			<div class="carousel w-full max-w-full space-x-4">
+				{#each upcomingBookings as booking}
+					<Card classes="carousel-item flex items-center py-4">
+						<div class="avatar">
+							<div class="w-16 h-16 rounded">
+								<img src={booking.imageUrl} alt={booking.title} />
+							</div>
 						</div>
-					</div>
-					<div class="ml-4">
-						<h5>{booking.title}</h5>
-						<span class="text-xs text-stone-500">{booking.subtitle}</span>
-						<p class="text-xs mt-2 text-black">{booking.thirdTitle}</p>
-					</div>
-					<img src="/icons/arrow-down.svg" alt="arrow" class="ml-[50px] -rotate-90" />
-				</Card>
-			{/each}
-		</div>
+						<div class="ml-4">
+							<h5>{booking.title}</h5>
+							<span class="text-xs text-stone-500">{booking.subtitle}</span>
+							<p class="text-xs mt-2 text-black">{booking.thirdTitle}</p>
+						</div>
+						<img src="/icons/arrow-down.svg" alt="arrow" class="ml-[50px] -rotate-90" />
+					</Card>
+				{/each}
+			</div>
+		{/if}
 	</div>
 </section>
