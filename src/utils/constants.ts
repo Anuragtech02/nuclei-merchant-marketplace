@@ -1,5 +1,10 @@
 import citiesWithNames from './mock/cities.json';
 
+export const HEADER_HEIGHT = {
+	DEFAULT: '80px',
+	MOBILE: '80px'
+};
+
 export const CITIES = [
 	{ name: 'Ahmedabad', code: 'AMD' },
 	{ name: 'Agra', code: 'AGR' },

@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { getHomeData, getUpcomingBookings, getWalletData } from '../utils/api/services';
 	import GlobalStore from '../utils/stores/globalStore';
+	import { HEADER_HEIGHT } from '../utils/constants';
 	const { update } = GlobalStore;
 
 	async function fetchWallet() {
@@ -45,7 +46,7 @@
 	});
 </script>
 
-<main class="min-h-screen mt-[80px] pt-2 max-w-screen-sm mx-auto">
+<main class={`mt-[${HEADER_HEIGHT.DEFAULT}] pt-2 max-w-screen-sm mx-auto`}>
 	<slot />
 </main>
 

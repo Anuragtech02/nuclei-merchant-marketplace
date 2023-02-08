@@ -3,10 +3,13 @@
 	import { onMount } from 'svelte';
 	import { Appbar, BottomSheet, FlightDetails } from '../../../components';
 	import { getListingData } from '../../../utils/api/services';
+	import { HEADER_HEIGHT } from '../../../utils/constants';
 	import { formatDate, getCityByCode } from '../../../utils/functions';
 	import type { IListingData, IOnwardFlight } from '../../../utils/interfaces';
 	import CustomTitleComp from './components/CustomTitleComp.svelte';
 	import SortAndFilter from './components/SortAndFilter/SortAndFilter.svelte';
+
+	const FOOTER_HEIGHT = '64px';
 
 	interface IParams {
 		adultCount: string;
@@ -101,6 +104,10 @@
 		}
 		return tempFlights;
 	}
+
+	function getContainerHeight() {
+		return `calc(100vh - ${HEADER_HEIGHT.DEFAULT} - ${FOOTER_HEIGHT})`;
+	}
 </script>
 
 <Appbar title="Listing Page" customTitleComp={true}>
@@ -131,7 +138,7 @@
 	<FlightDetails />
 </BottomSheet>
 
-<section class="mt-[80px]">
+<section class={`overflow-y-scroll`} style={`height: ${getContainerHeight()}`}>
 	{#if isLoading}
 		<div class="w-full h-full">
 			{#each [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as item}
@@ -193,7 +200,7 @@
 	preferredAirlinesOptions={[{ name: 'Air India', code: 'AI', icon: '/icons/meals.svg' }]}
 />
 
-<footer class="fixed bottom-0 left-0 w-full bg-[#E8E8EF] h-16">
+<footer class={`fixed bottom-0 left-0 w-full bg-[#E8E8EF] h-[64px]`}>
 	<div class="max-w-[sm] mx-auto">
 		<label
 			for="sort-filters"
