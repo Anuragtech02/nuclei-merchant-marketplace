@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+	import { EditIcon, TweaksIcon } from '../../../assets/icons';
 	import { Appbar, BottomSheet, FlightDetails } from '../../../components';
 	import { getListingData } from '../../../utils/api/services';
 	import { HEADER_HEIGHT } from '../../../utils/constants';
@@ -123,7 +124,7 @@
 	</div>
 	<div slot="extras">
 		<label for="modify-search" class="btn bg-accent hover:bg-accent btn-sm btn-square">
-			<img src="/icons/edit.svg" alt="edit" />
+			<EditIcon />
 		</label>
 	</div>
 </Appbar>
@@ -152,7 +153,7 @@
 	{/if}
 	{#if flights.length > 0}
 		<ul class="pt-4">
-			{#each searchFlightsUsingQuery() as flight}
+			{#each searchFlightsUsingQuery() as flight, i}
 				<li class="my-4">
 					<div class="flex justify-between">
 						<div>
@@ -189,7 +190,9 @@
 						{/each}
 					</div>
 				</li>
-				<div class="divider" />
+				{#if i < flights.length - 1}
+					<div class="divider" />
+				{/if}
 			{/each}
 		</ul>
 	{/if}
@@ -206,7 +209,7 @@
 			for="sort-filters"
 			class="btn btn-ghost hover:bg-accent rounded-none absolute right-0 h-full bg-accent flex flex-col drop-shadow-xl"
 		>
-			<img src="/icons/tweaks.svg" alt="filters" />
+			<TweaksIcon />
 			<span class="text-white capitalize font-normal text-xs mt-2">Sort & Filters</span>
 		</label>
 	</div>

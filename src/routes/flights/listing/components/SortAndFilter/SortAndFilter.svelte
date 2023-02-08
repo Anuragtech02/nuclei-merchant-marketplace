@@ -1,4 +1,14 @@
 <script lang="ts">
+	import {
+		CloseIcon,
+		HandBaggageIcon,
+		MealsGreyIcon,
+		RefundableGreyIcon,
+		MorningIcon,
+		NoonIcon,
+		EveningIcon,
+		NightIcon
+	} from '../../../../../assets/icons';
 	import { BottomSheet } from '../../../../../components';
 	import {
 		DEPARTURE_TIME_OPTIONS,
@@ -11,7 +21,8 @@
 	export let preferredAirlinesOptions: Array<{
 		name: string;
 		code: string;
-		icon: string;
+		// icon is a svelte component
+		icon: any;
 	}>;
 
 	let sortBy: string = 'price_asc';
@@ -48,6 +59,16 @@
 		departureTime = value;
 	}
 
+	const ICONS: any = {
+		RefundableGreyIcon,
+		HandBaggageIcon,
+		MealsGreyIcon,
+		MorningIcon,
+		NoonIcon,
+		EveningIcon,
+		NightIcon
+	};
+
 	function handleApplyFilters() {
 		console.log('apply filters');
 	}
@@ -61,7 +82,7 @@
 				<div>
 					<button class="btn btn-link capitalize text-accent decoration-none">Reset</button>
 					<label for="sort-filters" class="btn btn-sm btn-square bg-white">
-						<img src="/icons/close.svg" alt="close" />
+						<CloseIcon />
 					</label>
 				</div>
 			</div>
@@ -114,7 +135,7 @@
 					>
 						<div class="text-center">
 							<h4>{option.count < 2 ? option.count : '2+'}</h4>
-							<p class="text-stone-500 mt-2">{option.label}</p>
+							<p class="text-stone-500 mt-2 text-sm">{option.label}</p>
 						</div>
 					</div>
 				{/each}
@@ -123,10 +144,10 @@
 		<div class="divider" />
 		<div>
 			<h4>Departure from {sourceName}</h4>
-			<div class="flex justify-between gap-4 mt-2">
+			<div class="flex justify-between gap-4 mt-2 overflow-x-scroll py-1 px-1 max-w-full">
 				{#each DEPARTURE_TIME_OPTIONS as option}
 					<div
-						class="flex-1 bg-white rounded-lg p-4 px-5 border-primary outline-primary"
+						class="flex-1 bg-white rounded-lg py-4 px-2 min-w-[100px] border-primary outline-primary"
 						class:outline={departureTime === option.value}
 						role="button"
 						tabindex="0"
@@ -140,7 +161,9 @@
 						}}
 					>
 						<div class="text-center flex flex-col items-center">
-							<img src={option.icon} alt={option.label} class="w-6 h-6" />
+							<span class="w-6 h-6">
+								<svelte:component this={ICONS[option.icon]} />
+							</span>
 							<span class="text-stone-500 mt-2 text-xs">{option.time}</span>
 							<p class="text-stone-500 mt-2 text-sm">{option.label}</p>
 						</div>
@@ -168,8 +191,10 @@
 						}}
 					>
 						<div class="flex flex-col justify-center items-center">
-							<img src={option.icon} alt={option.label} class="w-4 h-4" />
-							<p class="text-stone-500 mt-2 text-sm">{option.label}</p>
+							<span class="w-4 h-4">
+								<svelte:component this={ICONS[option.icon]} />
+							</span>
+							<p class="text-stone-500 mt-2 text-sm text-center">{option.label}</p>
 						</div>
 					</div>
 				{/each}
@@ -193,7 +218,7 @@
 					<div class="form-control">
 						<label class="label cursor-pointer">
 							<div class="flex items-center justify-start">
-								<img src={option.icon} alt="flight-icon" />
+								<img src={option.icon} alt="airline" />
 								<span class="label-text ml-2">{option.name}</span>
 							</div>
 							<input

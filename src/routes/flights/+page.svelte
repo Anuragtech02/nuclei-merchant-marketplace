@@ -2,6 +2,7 @@
 	import { Appbar, Card, FlightDetails, SkeletonLoading } from '../../components';
 	import GlobalStore from '../../utils/stores/globalStore';
 	import type { IBooking } from '../../utils/interfaces';
+	import { ArrowDownIcon, KebabMenuIcon, PercentageIcon, WalletIcon } from '../../assets/icons';
 	const { subscribe } = GlobalStore;
 	let balance: number = 0;
 	let upcomingBookings: IBooking[] = [];
@@ -16,13 +17,13 @@
 <Appbar title="Flights" backLink="/">
 	<div slot="extras" class="flex justify-between items-center gap-2">
 		<button class="btn py-[4px] px-[16px] bg-[#1BA4F7] text-white">
-			<img src="/icons/wallet.svg" alt="wallet" /> &nbsp; ₹ {balance}
+			<WalletIcon /> &nbsp; ₹ {balance}
 		</button>
 		<button class="btn bg-[#1BA4F7] text-white">
-			<img src="/icons/percentage.svg" alt="offers" />
+			<PercentageIcon />
 		</button>
 		<button class="btn bg-transparent border-none p-0 ml-2">
-			<img src="/icons/kebab-menu.svg" alt="menu" />
+			<KebabMenuIcon />
 		</button>
 	</div>
 </Appbar>
@@ -58,7 +59,9 @@
 							<span class="text-xs text-stone-500">{booking.subtitle}</span>
 							<p class="text-xs mt-2 text-black">{booking.thirdTitle}</p>
 						</div>
-						<img src="/icons/arrow-down.svg" alt="arrow" class="ml-[50px] -rotate-90" />
+						<span class="ml-[50px] -rotate-90">
+							<ArrowDownIcon />
+						</span>
 					</Card>
 				{/each}
 			</div>

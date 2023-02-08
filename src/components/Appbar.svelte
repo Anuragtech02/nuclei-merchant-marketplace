@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { BackIcon } from '../assets/icons';
 	import { HEADER_HEIGHT } from '../utils/constants';
 	export let title: string = '';
 	export let backLink: string = '';
@@ -14,7 +15,7 @@
 	<div class="w-full max-w-screen-sm h-full mx-auto flex justify-between items-center text-white">
 		<div class="flex justify-start items-center">
 			<a href={backLink || getBackLink()} class="back-link">
-				<img src="/icons/back.svg" alt="back" class="w-4 h-3" />
+				<BackIcon />
 			</a>
 			{#if customTitleComp}
 				<slot name="customTitleComp" />

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { ArrowRightIcon } from '../../../../assets/icons';
 	import { getDateDayAndMonth } from '../../../../utils/functions';
 
 	export let src: string;
@@ -10,10 +11,11 @@
 </script>
 
 <div class="flex-col text-white ml-2">
-	<h3 class="flex justify-start gap-2 text-white">
+	<h3 class="flex justify-start gap-2 text-white items-center">
 		<span>
 			{src}
-		</span> <img src="/icons/arrow-right.svg" alt="arrow" />
+		</span>
+		<ArrowRightIcon />
 		<span>
 			{des}
 		</span>

@@ -44,25 +44,25 @@ export const DEPARTURE_TIME_OPTIONS = [
 		label: 'Morning',
 		time: '12AM - 6AM',
 		value: 'morning',
-		icon: '/icons/morning.svg'
+		icon: 'MorningIcon'
 	},
 	{
 		label: 'Noon',
 		time: '6AM - 12PM',
 		value: 'noon',
-		icon: '/icons/noon.svg'
+		icon: 'NoonIcon'
 	},
 	{
 		label: 'Evening',
 		time: '12PM - 6PM',
 		value: 'evening',
-		icon: '/icons/evening.svg'
+		icon: 'EveningIcon'
 	},
 	{
 		label: 'Night',
 		time: '6PM - 12AM',
 		value: 'night',
-		icon: '/icons/night.svg'
+		icon: 'NightIcon'
 	}
 ];
 
@@ -70,16 +70,16 @@ export const MORE_FILTERS_OPTIONS = [
 	{
 		label: 'Refundable',
 		value: 'refundable',
-		icon: '/icons/refundable-grey.svg'
+		icon: 'RefundableGreyIcon'
 	},
 	{
 		label: 'Hand Baggage Only',
 		value: 'hand_baggage',
-		icon: '/icons/hand-baggage.svg'
+		icon: 'HandBaggageIcon'
 	},
 	{
 		label: 'Free Meals',
 		value: 'free_meals',
-		icon: '/icons/meals-grey.svg'
+		icon: 'MealsGreyIcon'
 	}
 ];

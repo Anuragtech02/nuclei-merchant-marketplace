@@ -7,6 +7,7 @@
 	import GlobalStore from '../../../../utils/stores/globalStore';
 	import type { IRecentSearch } from '../../../../utils/stores/globalStore';
 	import SearchItem from './SearchItem.svelte';
+	import { SearchIcon } from '../../../../assets/icons';
 
 	const { subscribe, update } = GlobalStore;
 	// get parameters from route
@@ -99,7 +100,7 @@
 				placeholder="Enter City/Airport Name"
 				class="w-full bg-transparent focus:outline-none text-black"
 			/>
-			<img src="/icons/search.svg" alt="search" />
+			<SearchIcon />
 		</div>
 	</div>
 	<div>

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { BottomSheet, Counter, SkeletonLoading } from '..';
+	import { ArrowDownIcon } from '../../assets/icons';
 	import { TRAVEL_CLASS_OPTIONS, travellersOptions } from '../../utils/constants';
 	import { GlobalStore } from '../../utils/stores/globalStore';
 	import Card from '../Card.svelte';
-	import Select from '../Select.svelte';
 	const { subscribe, update } = GlobalStore;
 	let travelClass = '';
 	let travellers = 0;
@@ -41,7 +41,7 @@
 				<span>Class</span>
 				<div>
 					<p>{travelClass}</p>
-					<img src="/icons/arrow-down.svg" alt="arrow-down" class="w-4 h-3" />
+					<ArrowDownIcon />
 				</div>
 			</label>
 			<div class="divider divider-horizontal" />
@@ -49,7 +49,7 @@
 				<span>Traveller{'(s)'}</span>
 				<div>
 					<p>{travellers}</p>
-					<img src="/icons/arrow-down.svg" alt="arrow-down" class="w-4 h-3" />
+					<ArrowDownIcon />
 				</div>
 			</label>
 		</div>

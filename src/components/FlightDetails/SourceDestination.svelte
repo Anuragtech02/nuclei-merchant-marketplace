@@ -6,6 +6,7 @@
 	import type { ILocationObj, ISearchRequest } from '../../utils/interfaces';
 	import { goto } from '$app/navigation';
 	import { SkeletonLoading } from '..';
+	import { DotIcon, PlaneIcon, SwapIcon } from '../../assets/icons';
 	const { subscribe, update } = GlobalStore;
 	let searchRequest: ISearchRequest = {} as any;
 	let source: ILocationObj = {} as any;
@@ -36,11 +37,11 @@
 	{:else}
 		<div class={`flex flex-col items-center justify-between h-[${FLIGHT_DETAILSL_HEIGHT}px] gap-1`}>
 			<div>
-				<img src="/icons/dot.svg" alt="dot" />
+				<DotIcon />
 			</div>
 			<div class="w-[1px] bg-black flex-1" />
 			<div>
-				<img src="/icons/plane.svg" alt="airplane" />
+				<PlaneIcon />
 			</div>
 		</div>
 		<div class={`flex-1 h-[${FLIGHT_DETAILSL_HEIGHT}px] flex flex-col justify-between`}>
@@ -79,7 +80,7 @@
 				class="btn bg-transparent border-none p-0 py-0 hover:bg-transparent"
 				on:click={handleSwapSourceAndDestination}
 			>
-				<img src="/icons/swap.svg" alt="swap" />
+				<SwapIcon />
 			</button>
 		</div>
 	{/if}
