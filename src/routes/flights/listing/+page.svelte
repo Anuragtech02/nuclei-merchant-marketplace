@@ -33,6 +33,8 @@
 		params[key] = value;
 	});
 
+	$: console.log({ params });
+
 	let listingData: IListingData = {} as any;
 	let flights: IOnwardFlight[] = [] as any;
 
@@ -172,14 +174,12 @@
 						</div>
 					</div>
 					<div class="flex justify-start gap-2 mt-2">
-						<div class="flex justify-start gap-2">
-							<img src="/icons/refundable.png" alt="refundable" />
-							<span class="text-xs text-stone-500">Refundable</span>
-						</div>
-						<div class="flex justify-start gap-2">
-							<img src="/icons/meals.svg" alt="meal" />
-							<span class="text-xs text-stone-500">Free Meal</span>
-						</div>
+						{#each flight?.specialFeatures as feature}
+							<div class="flex justify-start gap-2">
+								<img class="w-4" src={feature?.icon} alt={feature?.title} />
+								<span class="text-xs text-stone-500">{feature?.title || 'NA'}</span>
+							</div>
+						{/each}
 					</div>
 				</li>
 				<div class="divider" />
