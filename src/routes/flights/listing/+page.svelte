@@ -199,8 +199,8 @@
 </section>
 
 <SortAndFilter
-	sourceName={String(getCityByCode(params.src))}
 	preferredAirlinesOptions={[{ name: 'Air India', code: 'AI', icon: '/icons/meals.svg' }]}
+	searchParams={params}
 />
 
 <footer class={`fixed bottom-0 left-0 w-full bg-[#E8E8EF] h-[64px]`}>

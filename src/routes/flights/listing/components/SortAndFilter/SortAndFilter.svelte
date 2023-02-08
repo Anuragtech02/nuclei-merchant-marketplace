@@ -10,6 +10,7 @@
 		NightIcon
 	} from '../../../../../assets/icons';
 	import { BottomSheet } from '../../../../../components';
+	import { getCityByCode } from '../../../../../utils/functions';
 	import {
 		DEPARTURE_TIME_OPTIONS,
 		MORE_FILTERS_OPTIONS,
@@ -17,7 +18,19 @@
 		STOP_OPTIONS
 	} from './constants';
 
-	export let sourceName: string;
+	interface IParams {
+		adultCount: string;
+		childCount: string;
+		departDate: string;
+		des: string;
+		infantCount: string;
+		isNonStop: string;
+		returnDate: string;
+		src: string;
+		travellerClass: string;
+	}
+
+	export let searchParams: IParams;
 	export let preferredAirlinesOptions: Array<{
 		name: string;
 		code: string;
@@ -25,11 +38,14 @@
 		icon: any;
 	}>;
 
+	let sourceName: string;
 	let sortBy: string = 'price_asc';
 	let stopsCount: string = 'non_stop';
 	let departureTime: string = 'morning';
 	let moreFilters: string[] = [];
 	let preferredAirlines: string[] = [];
+
+	$: sourceName = String(getCityByCode(searchParams?.src));
 
 	function handleClickSortBy(value: string) {
 		sortBy = value;
@@ -72,6 +88,14 @@
 	function handleApplyFilters() {
 		console.log('apply filters');
 	}
+
+	function handleResetFilters() {
+		sortBy = 'price_asc';
+		stopsCount = 'non_stop';
+		departureTime = 'morning';
+		moreFilters = [];
+		preferredAirlines = [];
+	}
 </script>
 
 <BottomSheet id="sort-filters" type="bottom" classes="p-0 rounded-none min-h-screen">
@@ -80,7 +104,10 @@
 			<div class="max-w-sm mx-auto flex justify-between p-4 items-center text-white">
 				<h5 class="text-white">Sort & Filter</h5>
 				<div>
-					<button class="btn btn-link capitalize text-accent decoration-none">Reset</button>
+					<button
+						class="btn btn-link capitalize text-accent decoration-none"
+						on:click={handleResetFilters}>Reset</button
+					>
 					<label for="sort-filters" class="btn btn-sm btn-square bg-white">
 						<CloseIcon />
 					</label>
