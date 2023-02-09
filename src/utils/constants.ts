@@ -5,6 +5,8 @@ export const HEADER_HEIGHT = {
 	MOBILE: '80px'
 };
 
+export const LS_RECENT_SEARCHES = 'NUCLEI_MM_RECENT_SEARCHES';
+
 export const CITIES = [
 	{ name: 'Ahmedabad', code: 'AMD' },
 	{ name: 'Agra', code: 'AGR' },

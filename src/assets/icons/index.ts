@@ -1,5 +1,6 @@
 export { default as ArrowDownIcon } from './arrow-down.svelte';
 export { default as ArrowRightIcon } from './arrow-right.svelte';
+export { default as ArrowRightBlackIcon } from './arrow-right-black.svelte';
 export { default as BackIcon } from './back.svelte';
 export { default as CloseIcon } from './close.svelte';
 export { default as DotIcon } from './dot.svelte';

@@ -85,9 +85,7 @@
 		NightIcon
 	};
 
-	function handleApplyFilters() {
-		console.log('apply filters');
-	}
+	function handleApplyFilters() {}
 
 	function handleResetFilters() {
 		sortBy = 'price_asc';

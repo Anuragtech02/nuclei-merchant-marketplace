@@ -2,12 +2,13 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import { Appbar } from '../../../../components';
-	import { CITIES_WITH_NAMES } from '../../../../utils/constants';
+	import { CITIES_WITH_NAMES, LS_RECENT_SEARCHES } from '../../../../utils/constants';
 	import { debounce } from '../../../../utils/functions';
 	import GlobalStore from '../../../../utils/stores/globalStore';
 	import type { IRecentSearch } from '../../../../utils/stores/globalStore';
 	import SearchItem from './SearchItem.svelte';
 	import { SearchIcon } from '../../../../assets/icons';
+	import type { IPopularCity } from '../../../../utils/interfaces';
 
 	const { subscribe, update } = GlobalStore;
 	// get parameters from route
@@ -19,7 +20,7 @@
 	let pageTitle = 'Search City';
 	let searchText: string = '';
 	let recentSearches: IRecentSearch[] = [];
-	let popularCities: IRecentSearch[] = CITIES_WITH_NAMES;
+	let popularCities: IPopularCity[] = CITIES_WITH_NAMES;
 	let alertText: string = '';
 	const DEBOUNCE_TIMEOUT = 500;
 
@@ -44,7 +45,7 @@
 		}
 	}, DEBOUNCE_TIMEOUT);
 
-	function handleClickSearchItem(item: IRecentSearch) {
+	function handleClickSearchItem(item: IPopularCity) {
 		let { city, iataCode, name } = item;
 		let updateKey = searchType === 'source' ? 'src' : 'des';
 

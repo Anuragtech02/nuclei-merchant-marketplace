@@ -11,7 +11,7 @@
 	}
 </script>
 
-<nav class={`w-full h-[${HEADER_HEIGHT.DEFAULT}] px-4 fixed top-0 left-0 bg-primary`}>
+<nav class={`w-full h-[80px] px-4 fixed top-0 left-0 bg-primary`}>
 	<div class="w-full max-w-screen-sm h-full mx-auto flex justify-between items-center text-white">
 		<div class="flex justify-start items-center">
 			<a href={backLink || getBackLink()} class="back-link">

@@ -4,11 +4,14 @@
 	import { EditIcon, TweaksIcon } from '../../../assets/icons';
 	import { Appbar, BottomSheet, FlightDetails } from '../../../components';
 	import { getListingData } from '../../../utils/api/services';
-	import { HEADER_HEIGHT } from '../../../utils/constants';
+	import { HEADER_HEIGHT, LS_RECENT_SEARCHES } from '../../../utils/constants';
 	import { formatDate, getCityByCode } from '../../../utils/functions';
 	import type { IListingData, IOnwardFlight } from '../../../utils/interfaces';
 	import CustomTitleComp from './components/CustomTitleComp.svelte';
 	import SortAndFilter from './components/SortAndFilter/SortAndFilter.svelte';
+	import GlobalStore, { type IRecentSearch } from '../../../utils/stores/globalStore';
+
+	const { update } = GlobalStore;
 
 	const FOOTER_HEIGHT = '64px';
 
@@ -36,8 +39,6 @@
 		// @ts-ignore
 		params[key] = value;
 	});
-
-	$: console.log({ params });
 
 	let listingData: IListingData = {} as any;
 	let flights: IOnwardFlight[] = [] as any;
@@ -85,6 +86,45 @@
 
 	onMount(async () => {
 		fetchListingData();
+
+		// check if local storage has recent searches
+		const recentSearchesFromLocalStorage = localStorage.getItem(LS_RECENT_SEARCHES);
+		let newSearchItem: IRecentSearch = {
+			id: Date.now().toString(),
+			createdAt: Date.now().toString(),
+			src: {
+				iataCode: params?.src,
+				name: String(getCityByCode(params?.src)),
+				city: String(getCityByCode(params?.src)),
+				countryCode: 'IN'
+			},
+			des: {
+				iataCode: params?.des,
+				name: String(getCityByCode(params?.des)),
+				city: String(getCityByCode(params?.des)),
+				countryCode: 'IN'
+			},
+			departDate: formatDate(params?.departDate)
+		};
+		let newRecentSearches: IRecentSearch[] = [];
+		if (recentSearchesFromLocalStorage) {
+			let recentSearches = JSON.parse(recentSearchesFromLocalStorage);
+			// update the array of recent searches in store and LS
+			newRecentSearches = recentSearches;
+			newRecentSearches = [newSearchItem, ...newRecentSearches];
+			update((value) => {
+				value.recentSearches = recentSearches;
+				return value;
+			});
+		} else {
+			newRecentSearches = [newSearchItem];
+		}
+		// update story and LS
+		localStorage.setItem(LS_RECENT_SEARCHES, JSON.stringify(newRecentSearches));
+		update((value) => {
+			value.recentSearches = newRecentSearches;
+			return value;
+		});
 	});
 
 	$: params.adultCount,

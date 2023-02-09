@@ -1,17 +1,34 @@
 <script lang="ts">
 	import { Appbar, Card, FlightDetails, SkeletonLoading } from '../../components';
-	import GlobalStore from '../../utils/stores/globalStore';
+	import GlobalStore, { type IRecentSearch } from '../../utils/stores/globalStore';
 	import type { IBooking } from '../../utils/interfaces';
-	import { ArrowDownIcon, KebabMenuIcon, PercentageIcon, WalletIcon } from '../../assets/icons';
+	import {
+		ArrowDownIcon,
+		ArrowRightBlackIcon,
+		ArrowRightIcon,
+		KebabMenuIcon,
+		PercentageIcon,
+		RecentIcon,
+		WalletIcon
+	} from '../../assets/icons';
+	import { getDateDayAndMonth } from '../../utils/functions';
 	const { subscribe } = GlobalStore;
 	let balance: number = 0;
 	let upcomingBookings: IBooking[] = [];
+	let recentSearches: IRecentSearch[] = [];
 	let isLoading = true;
+	let formatedDateStr = '';
 
 	subscribe((value) => {
 		upcomingBookings = value.upcomingBookings;
+		recentSearches = value.recentSearches;
 		isLoading = value.isLoading;
 	});
+
+	function getFormatedDateStr(date: string) {
+		let dateObj = getDateDayAndMonth(date);
+		return `${dateObj.day}, ${dateObj.date}, ${dateObj.month}`;
+	}
 </script>
 
 <Appbar title="Flights" backLink="/">
@@ -42,7 +59,7 @@
 				<SkeletonLoading showImage imageShape="square" length="short" bordered />
 			</div>
 		{:else if upcomingBookings.length === 0}
-			<div class="flex justify-center items-center h-[200px]">
+			<div class="flex justify-center items-center h-[100px]">
 				<p class="text-center text-sm text-stone-500">No upcoming bookings</p>
 			</div>
 		{:else}
@@ -62,6 +79,39 @@
 						<span class="ml-[50px] -rotate-90">
 							<ArrowDownIcon />
 						</span>
+					</Card>
+				{/each}
+			</div>
+		{/if}
+	</div>
+	<div class="mt-6">
+		<div class="flex justify-between items-center">
+			<h4>Recent Searches</h4>
+			{#if upcomingBookings.length > 0}
+				<a class="link link-hover text-sm text-primary" href="/flights">View All</a>
+			{/if}
+		</div>
+		{#if isLoading}
+			<div class="my-2">
+				<SkeletonLoading showImage imageShape="square" length="short" bordered />
+			</div>
+		{:else if recentSearches.length === 0}
+			<div class="flex justify-center items-center h-[100px]">
+				<p class="text-center text-sm text-stone-500">No recent searches</p>
+			</div>
+		{:else}
+			<div class="carousel w-full max-w-full space-x-4">
+				{#each recentSearches as search}
+					<Card classes="carousel-item flex items-center py-4">
+						<RecentIcon />
+						<div class="ml-4">
+							<div class="flex justify-between items-center &[>h5]:text-black gap-2">
+								<h5>{search?.src?.city}</h5>
+								<ArrowRightBlackIcon />
+								<h5>{search?.des?.city}</h5>
+							</div>
+							<span class="text-xs text-stone-500">{getFormatedDateStr(search.departDate)}</span>
+						</div>
 					</Card>
 				{/each}
 			</div>

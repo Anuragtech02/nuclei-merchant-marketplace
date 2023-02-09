@@ -136,12 +136,20 @@ export interface IHomeData {
 	categorySdkConfig: CategorySdkConfig;
 }
 
+export interface IPopularCity {
+	id: string; // ISO Date String
+	createdAt: string; // ISO Date String
+	city: string;
+	iataCode: string;
+	name: string;
+}
+
 export interface ISourceAirportCode {
 	iataCode: string;
 	city: string;
 	name: string;
 	countryCode: string;
-	iconUrl: string;
+	iconUrl?: string;
 }
 
 export interface IDestinationAirportCode {
@@ -149,7 +157,7 @@ export interface IDestinationAirportCode {
 	city: string;
 	name: string;
 	countryCode: string;
-	iconUrl: string;
+	iconUrl?: string;
 }
 
 export interface ISegmentAirlineInfo {

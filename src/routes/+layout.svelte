@@ -49,7 +49,7 @@
 	});
 </script>
 
-<main class={`mt-[${HEADER_HEIGHT.DEFAULT}] pt-2 max-w-screen-sm mx-auto`}>
+<main class={`mt-[80px] pt-2 max-w-screen-sm mx-auto`}>
 	<slot />
 </main>
 

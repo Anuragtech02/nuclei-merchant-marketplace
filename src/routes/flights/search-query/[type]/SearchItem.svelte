@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { LocationIcon, RecentIcon } from '../../../../assets/icons';
-	import type { IRecentSearch } from '../../../../utils/stores/globalStore';
+	import type { IPopularCity } from '../../../../utils/interfaces';
 
-	export let item: IRecentSearch;
+	export let item: IPopularCity;
 	export let type: 'recent' | 'new';
 </script>
 

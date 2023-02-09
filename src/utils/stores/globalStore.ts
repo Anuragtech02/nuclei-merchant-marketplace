@@ -1,5 +1,10 @@
 import { writable, type Updater, type Writable } from 'svelte/store';
-import type { IBooking, ISearchRequest } from '../interfaces';
+import type {
+	IBooking,
+	IDestinationAirportCode,
+	ISearchRequest,
+	ISourceAirportCode
+} from '../interfaces';
 
 const defaultFlightDetails: ISearchRequest = {} as ISearchRequest;
 
@@ -17,9 +22,9 @@ const defaultGlobalState = {
 export interface IRecentSearch {
 	id: string; // ISO Date String
 	createdAt: string; // ISO Date String
-	city: string;
-	iataCode: string;
-	name: string;
+	src: ISourceAirportCode;
+	des: IDestinationAirportCode;
+	departDate: string;
 }
 
 export interface IGlobalStoreData {
