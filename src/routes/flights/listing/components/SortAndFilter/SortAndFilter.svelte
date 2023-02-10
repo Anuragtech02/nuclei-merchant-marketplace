@@ -11,6 +11,12 @@
 	} from '../../../../../assets/icons';
 	import { BottomSheet } from '../../../../../components';
 	import { getCityByCode } from '../../../../../utils/functions';
+	import type {
+		IFilterList,
+		ISortFilterOptions,
+		ISortList,
+		ISubFilterList
+	} from '../../../../../utils/interfaces';
 	import {
 		DEPARTURE_TIME_OPTIONS,
 		MORE_FILTERS_OPTIONS,
@@ -31,48 +37,63 @@
 	}
 
 	export let searchParams: IParams;
-	export let preferredAirlinesOptions: Array<{
+	let preferredAirlinesOptions: Array<{
 		name: string;
 		code: string;
 		// icon is a svelte component
 		icon: any;
-	}>;
+	}> = [{ name: 'Air India', code: 'AI', icon: '/icons/meals.svg' }];
+	export let sortFilterOptions: ISortFilterOptions;
+
+	let sortList: ISortList[] = [];
+	let filterList: IFilterList[] = [];
+
+	function updateFilterOptions() {
+		if (!sortFilterOptions?.sortFilter?.length) return;
+		sortList = sortFilterOptions?.sortFilter[0]?.sortList;
+		filterList = sortFilterOptions?.sortFilter[0]?.filterList;
+		console.log({ sortList, filterList, sortFilterOptions });
+	}
+
+	$: sortFilterOptions, updateFilterOptions();
 
 	let sourceName: string;
-	let sortBy: string = 'price_asc';
-	let stopsCount: string = 'non_stop';
-	let departureTime: string = 'morning';
-	let moreFilters: string[] = [];
-	let preferredAirlines: string[] = [];
+	let sortBy = {
+		sortId: 1,
+		name: 'Price\n(Cheapest First)',
+		subName: '',
+		iconUrl: '',
+		selected: true
+	};
+	let gridFilters: any = {
+		stopsCount: {} as ISubFilterList,
+		departureTime: 'morning',
+		moreFilters: []
+	};
+	let listFilters: any = {
+		preferredAirlines: []
+	};
 
-	$: sourceName = String(getCityByCode(searchParams?.src));
-
-	function handleClickSortBy(value: string) {
+	function handleClickSortBy(value: any) {
 		sortBy = value;
 	}
 
 	function handleClickPreferredAirlines(value: string) {
-		if (preferredAirlines.includes(value)) {
-			preferredAirlines = preferredAirlines.filter((item) => item !== value);
+		if (listFilters.preferredAirlines.includes(value)) {
+			listFilters.preferredAirlines = listFilters.preferredAirlines.filter(
+				(item: any) => item !== value
+			);
 		} else {
-			preferredAirlines = [...preferredAirlines, value];
+			listFilters.preferredAirlines = [...listFilters.preferredAirlines, value];
 		}
 	}
 
 	function handleClickMoreFilters(value: string) {
-		if (moreFilters.includes(value)) {
-			moreFilters = moreFilters.filter((item) => item !== value);
+		if (gridFilters.moreFilters.includes(value)) {
+			gridFilters.moreFilters = gridFilters.moreFilters.filter((item: any) => item !== value);
 		} else {
-			moreFilters = [...moreFilters, value];
+			gridFilters.moreFilters = [...gridFilters.moreFilters, value];
 		}
-	}
-
-	function handleClickStopsCount(value: string) {
-		stopsCount = value;
-	}
-
-	function handleClickDepartureTime(value: string) {
-		departureTime = value;
 	}
 
 	const ICONS: any = {
@@ -88,11 +109,36 @@
 	function handleApplyFilters() {}
 
 	function handleResetFilters() {
-		sortBy = 'price_asc';
-		stopsCount = 'non_stop';
-		departureTime = 'morning';
-		moreFilters = [];
-		preferredAirlines = [];
+		sortBy = {
+			sortId: 1,
+			name: 'Price\n(Cheapest First)',
+			subName: '',
+			iconUrl: '',
+			selected: true
+		};
+	}
+
+	function getFilterGrid() {
+		return filterList?.filter((item: any) => item?.gridFilter?.subFilterList);
+	}
+
+	function getFilterList() {
+		return filterList?.filter((item: any) => item?.listFilter?.listItems);
+	}
+
+	function handleClickFilterItem(gridItem: any, subGriditem: any) {
+		// check if the current item is already selected
+		const prevItems = gridFilters[gridItem.id] || [];
+		if (prevItems?.findIndex((item: any) => item.id === subGriditem.id) > -1) {
+			gridFilters[gridItem.id] = prevItems.filter((item: any) => item.id !== subGriditem.id);
+		} else {
+			gridFilters[gridItem.id] = [...prevItems, subGriditem];
+		}
+	}
+
+	function getSelectedStatus(gridItem: any, subGridItem: any) {
+		const prevItems = gridFilters[gridItem.id] || [];
+		return prevItems?.findIndex((item: any) => item.id === subGridItem.id) > -1;
 	}
 </script>
 
@@ -117,22 +163,22 @@
 		<div>
 			<h4>Sort By</h4>
 			<div class="grid grid-rows-2 grid-flow-col gap-2 mt-2">
-				{#each SORT_OPTIONS as option}
+				{#each sortList as option}
 					<div
 						class={`flex justify-between items-center bg-white rounded-lg p-4 px-5 outline-primary`}
-						class:outline={sortBy === option.value}
+						class:outline={sortBy.name === option.name}
 						on:click={() => {
-							handleClickSortBy(option.value);
+							handleClickSortBy(option);
 						}}
 						on:keydown={(e) => {
 							if (e.key === 'Enter') {
-								handleClickSortBy(option.value);
+								handleClickSortBy(option);
 							}
 						}}
 					>
 						<div>
-							<h5>{option.label}</h5>
-							<span class="text-xs text-stone-500">{option.subTitle}</span>
+							<h5>{option.name?.split('\n')[0]}</h5>
+							<span class="text-xs text-stone-500">{option.name?.split('\n')[1]}</span>
 						</div>
 						<!-- <input type="radio" name="sort" id={option.value} /> -->
 					</div>
@@ -140,125 +186,94 @@
 			</div>
 		</div>
 		<div class="divider" />
-		<div>
-			<h4>No. of Stops</h4>
-			<div class="flex justify-between gap-4 mt-2">
-				{#each STOP_OPTIONS as option}
-					<div
-						class="flex-1 bg-white rounded-lg p-4 px-5 border-primary outline-primary"
-						class:outline={stopsCount === option.value}
-						role="button"
-						tabindex="0"
-						on:click={() => {
-							handleClickStopsCount(option.value);
-						}}
-						on:keydown={(e) => {
-							if (e.key === 'Enter') {
-								handleClickStopsCount(option.value);
-							}
-						}}
-					>
-						<div class="text-center">
-							<h4>{option.count < 2 ? option.count : '2+'}</h4>
-							<p class="text-stone-500 mt-2 text-sm">{option.label}</p>
+		{#if filterList?.length > 0}
+			{#each getFilterGrid() as filterOption}
+				<div>
+					<h4>{filterOption?.title}</h4>
+					{#if filterOption?.gridFilter}
+						<div
+							class={`grid grid-cols-${
+								Object.values(filterOption?.gridFilter?.subFilterList)?.length
+							} gap-2 mt-2`}
+						>
+							{#each Object.values(filterOption?.gridFilter?.subFilterList) as subFilter}
+								<div
+									class="flex-1 bg-white rounded-lg p-2 py-3 border-primary outline-primary"
+									class:outline={gridFilters[filterOption.id]?.findIndex(
+										// @ts-ignore
+										(item) => item.id === subFilter.id
+									) > -1}
+									role="button"
+									tabindex="0"
+									on:click={() => {
+										handleClickFilterItem(filterOption, subFilter);
+									}}
+									on:keydown={(e) => {
+										if (e.key === 'Enter') {
+											handleClickFilterItem(filterOption, subFilter);
+										}
+									}}
+								>
+									<div class="text-center flex flex-col items-center justify-center">
+										<!-- {#if subFilter?.text}
+											<h4>{subFilter?.text}</h4>
+										{/if} -->
+										{#if subFilter?.imageUrl}
+											<img class="w-5 grayscale" src={subFilter?.imageUrl} alt="filter" />
+										{/if}
+										{#if subFilter?.text}
+											<p class="text-stone-500 mt-2 text-xs whitespace-nowrap">{subFilter.text}</p>
+										{/if}
+										{#if subFilter?.subText}
+											<span class="text-xs text-stone-500">{subFilter?.subText}</span>
+										{/if}
+									</div>
+								</div>
+							{/each}
 						</div>
+					{/if}
+				</div>
+				<div class="divider" />
+			{/each}
+			{#each getFilterList() as filterOption}
+				<div class="bg-white rounded-xl p-4">
+					<div class="flex justify-between items-center">
+						<h4>{filterOption?.title}</h4>
+						<button
+							class="btn btn-link capitalize text-primary p-0 m-0"
+							on:click={() => {
+								listFilters.preferredAirlines = [];
+							}}
+						>
+							Reset
+						</button>
 					</div>
-				{/each}
-			</div>
-		</div>
-		<div class="divider" />
-		<div>
-			<h4>Departure from {sourceName}</h4>
-			<div class="flex justify-between gap-4 mt-2 overflow-x-scroll py-1 px-1 max-w-full">
-				{#each DEPARTURE_TIME_OPTIONS as option}
-					<div
-						class="flex-1 bg-white rounded-lg py-4 px-2 min-w-[100px] border-primary outline-primary"
-						class:outline={departureTime === option.value}
-						role="button"
-						tabindex="0"
-						on:click={() => {
-							handleClickDepartureTime(option.value);
-						}}
-						on:keydown={(e) => {
-							if (e.key === 'Enter') {
-								handleClickDepartureTime(option.value);
-							}
-						}}
-					>
-						<div class="text-center flex flex-col items-center">
-							<span class="w-6 h-6">
-								<svelte:component this={ICONS[option.icon]} />
-							</span>
-							<span class="text-stone-500 mt-2 text-xs">{option.time}</span>
-							<p class="text-stone-500 mt-2 text-sm">{option.label}</p>
+					{#if filterOption?.listFilter}
+						<div>
+							{#each Object.values(filterOption?.listFilter?.listItems) as listItem}
+								<div class="form-control">
+									<label class="label cursor-pointer">
+										<div class="flex items-center justify-start">
+											<img class="w-4 h-4" src={listItem?.iconUrl} alt="airline" />
+											<span class="label-text text-black ml-2">{listItem.descText}</span>
+										</div>
+										<input
+											type="checkbox"
+											on:change={() => {
+												handleClickPreferredAirlines(listItem.id);
+											}}
+											checked={listFilters.preferredAirlines.includes(listItem.id)}
+											class="checkbox"
+										/>
+									</label>
+								</div>
+							{/each}
 						</div>
-					</div>
-				{/each}
-			</div>
-		</div>
-		<div class="divider" />
-		<div>
-			<h4>More Filters</h4>
-			<div class="flex justify-between gap-4 mt-2 flex-wrap">
-				{#each MORE_FILTERS_OPTIONS as option}
-					<div
-						class="flex-1 min-w-[150px] bg-white rounded-lg p-4 px-5 border-primary outline-primary"
-						class:outline={moreFilters.includes(option.value)}
-						role="button"
-						tabindex="0"
-						on:click={() => {
-							handleClickMoreFilters(option.value);
-						}}
-						on:keydown={(e) => {
-							if (e.key === 'Enter') {
-								handleClickMoreFilters(option.value);
-							}
-						}}
-					>
-						<div class="flex flex-col justify-center items-center">
-							<span class="w-4 h-4">
-								<svelte:component this={ICONS[option.icon]} />
-							</span>
-							<p class="text-stone-500 mt-2 text-sm text-center">{option.label}</p>
-						</div>
-					</div>
-				{/each}
-			</div>
-		</div>
-		<div class="divider" />
-		<div class="bg-white rounded-xl p-4">
-			<div class="flex justify-between items-center">
-				<h4>Preferred Airlines</h4>
-				<button
-					class="btn btn-link capitalize text-primary p-0 m-0"
-					on:click={() => {
-						preferredAirlines = [];
-					}}
-				>
-					Reset
-				</button>
-			</div>
-			<div>
-				{#each preferredAirlinesOptions as option}
-					<div class="form-control">
-						<label class="label cursor-pointer">
-							<div class="flex items-center justify-start">
-								<img src={option.icon} alt="airline" />
-								<span class="label-text ml-2">{option.name}</span>
-							</div>
-							<input
-								type="checkbox"
-								on:change={() => {
-									handleClickPreferredAirlines(option.code);
-								}}
-								checked={preferredAirlines.includes(option.code)}
-								class="checkbox"
-							/>
-						</label>
-					</div>
-				{/each}
-			</div>
-		</div>
+					{/if}
+				</div>
+			{/each}
+		{/if}
+
 		<button
 			type="button"
 			class="btn bg-accent hover:bg-accent text-white mt-6 capitalize w-full border-0">Apply</button

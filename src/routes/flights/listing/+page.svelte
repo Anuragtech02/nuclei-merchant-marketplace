@@ -3,10 +3,10 @@
 	import { onMount } from 'svelte';
 	import { EditIcon, TweaksIcon } from '../../../assets/icons';
 	import { Appbar, BottomSheet, FlightDetails } from '../../../components';
-	import { getListingData } from '../../../utils/api/services';
+	import { getListingData, getSortFilterOptions } from '../../../utils/api/services';
 	import { HEADER_HEIGHT, LS_RECENT_SEARCHES } from '../../../utils/constants';
 	import { formatDate, getCityByCode } from '../../../utils/functions';
-	import type { IListingData, IOnwardFlight } from '../../../utils/interfaces';
+	import type { IListingData, IOnwardFlight, ISortFilterOptions } from '../../../utils/interfaces';
 	import CustomTitleComp from './components/CustomTitleComp.svelte';
 	import SortAndFilter from './components/SortAndFilter/SortAndFilter.svelte';
 	import GlobalStore, { type IRecentSearch } from '../../../utils/stores/globalStore';
@@ -18,6 +18,7 @@
 
 	let travellerCount = 0;
 	let isLoading = true;
+	let sortFilterOptions: ISortFilterOptions = {} as ISortFilterOptions;
 
 	// extract all params from query in URL
 	let searchParams = $page.url.searchParams;
@@ -44,8 +45,18 @@
 		isLoading = false;
 	}
 
+	async function fetchSortFilterOptions() {
+		try {
+			const res = await getSortFilterOptions(getSearchRequestObj(params));
+			sortFilterOptions = res.data;
+		} catch (error) {
+			console.log('ERROR_FETCHING_SORT_FILTER_OPTIONS', error);
+		}
+	}
+
 	onMount(async () => {
 		updateRecentSearches(params);
+		fetchSortFilterOptions();
 	});
 
 	$: params.adultCount,
@@ -153,10 +164,7 @@
 	{/if}
 </section>
 
-<SortAndFilter
-	preferredAirlinesOptions={[{ name: 'Air India', code: 'AI', icon: '/icons/meals.svg' }]}
-	searchParams={params}
-/>
+<SortAndFilter {sortFilterOptions} searchParams={params} />
 
 <footer class={`fixed bottom-0 left-0 w-full bg-[#E8E8EF] h-[64px]`}>
 	<div class="max-w-[sm] mx-auto">

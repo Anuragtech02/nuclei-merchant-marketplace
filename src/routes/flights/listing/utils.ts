@@ -66,7 +66,7 @@ export function updateRecentSearches(params: IParams) {
 	} else {
 		newRecentSearches = [newSearchItem];
 	}
-	// update story and LS
+	// update store and LS
 	localStorage.setItem(LS_RECENT_SEARCHES, JSON.stringify(newRecentSearches));
 	update((value) => {
 		value.recentSearches = newRecentSearches;
