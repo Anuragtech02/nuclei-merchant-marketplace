@@ -1,6 +1,7 @@
 import type {
 	IHomeData,
 	IListingData,
+	ISortFilterOptions,
 	IUpcomingBookingsResponse,
 	IWalletResponse
 } from '../interfaces';
@@ -33,8 +34,8 @@ function searchCity(searchText: string) {
 	});
 }
 
-function getFilteredFlights(body: IListingPageSearchBody) {
-	return API_LISTING.post('/FetchFlightSortFilters', body);
+function getSortFilterOptions(body: IListingPageSearchBody) {
+	return API_LISTING.post<ISortFilterOptions>('/FetchFlightSortFilters', body);
 }
 
 export {
@@ -44,5 +45,5 @@ export {
 	getWalletData,
 	getPopularCities,
 	searchCity,
-	getFilteredFlights
+	getSortFilterOptions
 };

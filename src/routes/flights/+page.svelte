@@ -50,7 +50,7 @@
 	<div class="mt-6">
 		<div class="flex justify-between items-center">
 			<h4>Upcoming Bookings</h4>
-			{#if upcomingBookings.length > 0}
+			{#if upcomingBookings?.length > 0}
 				<a class="link link-hover text-sm text-primary" href="/flights">View All</a>
 			{/if}
 		</div>
@@ -58,7 +58,7 @@
 			<div class="my-2">
 				<SkeletonLoading showImage imageShape="square" length="short" bordered />
 			</div>
-		{:else if upcomingBookings.length === 0}
+		{:else if upcomingBookings?.length === 0}
 			<div class="flex justify-center items-center h-[100px]">
 				<p class="text-center text-sm text-stone-500">No upcoming bookings</p>
 			</div>
@@ -84,22 +84,14 @@
 			</div>
 		{/if}
 	</div>
-	<div class="mt-6">
-		<div class="flex justify-between items-center">
-			<h4>Recent Searches</h4>
-			{#if upcomingBookings.length > 0}
-				<a class="link link-hover text-sm text-primary" href="/flights">View All</a>
-			{/if}
-		</div>
-		{#if isLoading}
-			<div class="my-2">
-				<SkeletonLoading showImage imageShape="square" length="short" bordered />
+	{#if recentSearches?.length > 0}
+		<div class="mt-6">
+			<div class="flex justify-between items-center">
+				<h4>Recent Searches</h4>
+				{#if recentSearches.length > 1}
+					<a class="link link-hover text-sm text-primary" href="/flights">View All</a>
+				{/if}
 			</div>
-		{:else if recentSearches.length === 0}
-			<div class="flex justify-center items-center h-[100px]">
-				<p class="text-center text-sm text-stone-500">No recent searches</p>
-			</div>
-		{:else}
 			<div class="carousel w-full max-w-full space-x-4">
 				{#each recentSearches as search}
 					<Card classes="carousel-item flex items-center py-4">
@@ -115,6 +107,6 @@
 					</Card>
 				{/each}
 			</div>
-		{/if}
-	</div>
+		</div>
+	{/if}
 </section>

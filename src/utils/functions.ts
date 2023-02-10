@@ -6,6 +6,7 @@ export function getCityByCode(code: string): string | undefined {
 
 export function getDateDayAndMonth(dateStr: string) {
 	const dateObj = new Date(parseInt(dateStr));
+	// console.log({ dateObj, dateStr });
 	const date = dateObj.getDate();
 	const month = dateObj.toLocaleString('default', { month: 'short' });
 	const day = dateObj.toLocaleString('default', { weekday: 'short' });

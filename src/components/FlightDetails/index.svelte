@@ -5,6 +5,8 @@
 	import type { ISearchRequest } from '../../utils/interfaces';
 	const { subscribe } = GlobalStore;
 
+	export let afterClickSearch: () => void = () => {};
+
 	let isNonStopChecked: boolean = false;
 
 	let searchRequest: ISearchRequest = {} as ISearchRequest;
@@ -62,6 +64,9 @@
 			isNonStopChecked;
 
 		goto(`/flights/listing${searchQuery}`, { replaceState: true });
+		if (afterClickSearch) {
+			afterClickSearch();
+		}
 	}
 </script>
 

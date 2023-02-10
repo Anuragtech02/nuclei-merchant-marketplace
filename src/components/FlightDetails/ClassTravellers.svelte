@@ -1,7 +1,7 @@
 <script lang="ts">
+	import { onDestroy } from 'svelte';
 	import { BottomSheet, Counter, SkeletonLoading } from '..';
 	import { ArrowDownIcon } from '../../assets/icons';
-	import { TRAVEL_CLASS_OPTIONS, travellersOptions } from '../../utils/constants';
 	import { GlobalStore } from '../../utils/stores/globalStore';
 	import Card from '../Card.svelte';
 	const { subscribe, update } = GlobalStore;
@@ -12,12 +12,17 @@
 	let infants = 0;
 	let maxTravellerDisabled = false;
 	let isLoading = true;
+	let travelClassOptions: Array<{
+		key: string;
+		value: string;
+	}> = [];
 
 	subscribe((value) => {
 		travelClass = value.searchRequest.travellerClass;
 		adults = value.searchRequest.adultCount;
 		children = value.searchRequest.childCount;
 		infants = value.searchRequest.infantCount;
+		travelClassOptions = value.searchRequest.travellers;
 		isLoading = value.isLoading;
 	});
 
@@ -30,6 +35,19 @@
 		infants,
 		(maxTravellerDisabled = getAvailableTravellers() <= 0),
 		(travellers = adults + children + infants);
+
+	// update values in store
+	function updateStore() {
+		update((value) => {
+			value.searchRequest.adultCount = adults;
+			value.searchRequest.childCount = children;
+			value.searchRequest.infantCount = infants;
+			value.searchRequest.travellerClass = travelClass;
+			return value;
+		});
+	}
+
+	$: adults, children, infants, travelClass, updateStore();
 </script>
 
 <Card>
@@ -85,20 +103,22 @@
 		<div class="mt-4">
 			<h4 class="font-medium">Select Class</h4>
 			<div class="mt-2">
-				{#each TRAVEL_CLASS_OPTIONS as tClass}
-					<div class="form-control">
-						<label class="label cursor-pointer p-0 my-2 flex justify-start">
-							<input
-								type="radio"
-								name="radio-1"
-								class="radio border-primary checked:bg-primary checked:border-primary w-4 h-4"
-								value={tClass}
-								bind:group={travelClass}
-							/>
-							<span class="label-text ml-2 text-black">{tClass}</span>
-						</label>
-					</div>
-				{/each}
+				{#if travelClassOptions?.length}
+					{#each travelClassOptions as tClass}
+						<div class="form-control">
+							<label class="label cursor-pointer p-0 my-2 flex justify-start">
+								<input
+									type="radio"
+									name="radio-1"
+									class="radio border-primary checked:bg-primary checked:border-primary w-4 h-4"
+									value={tClass.key}
+									bind:group={travelClass}
+								/>
+								<span class="label-text ml-2 text-black">{tClass.value}</span>
+							</label>
+						</div>
+					{/each}
+				{/if}
 			</div>
 		</div>
 	</BottomSheet>

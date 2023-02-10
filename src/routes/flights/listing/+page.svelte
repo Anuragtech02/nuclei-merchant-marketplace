@@ -10,22 +10,11 @@
 	import CustomTitleComp from './components/CustomTitleComp.svelte';
 	import SortAndFilter from './components/SortAndFilter/SortAndFilter.svelte';
 	import GlobalStore, { type IRecentSearch } from '../../../utils/stores/globalStore';
+	import { getSearchRequestObj, updateRecentSearches, type IParams } from './utils';
 
 	const { update } = GlobalStore;
 
 	const FOOTER_HEIGHT = '64px';
-
-	interface IParams {
-		adultCount: string;
-		childCount: string;
-		departDate: string;
-		des: string;
-		infantCount: string;
-		isNonStop: string;
-		returnDate: string;
-		src: string;
-		travellerClass: string;
-	}
 
 	let travellerCount = 0;
 	let isLoading = true;
@@ -46,36 +35,7 @@
 	async function fetchListingData() {
 		isLoading = true;
 		try {
-			const res = await getListingData({
-				src: {
-					iataCode: params?.src,
-					city: String(getCityByCode(params?.src)),
-					countryCode: 'IN'
-				},
-				des: {
-					iataCode: params?.des,
-					city: String(getCityByCode(params?.des)),
-					countryCode: 'IN'
-				},
-				departDate: formatDate(params?.departDate),
-				passenger: {
-					adultCount: parseInt(params?.adultCount),
-					childCount: parseInt(params?.childCount),
-					infantCount: parseInt(params?.infantCount)
-				},
-				travellerClass: {
-					key: params?.travellerClass,
-					value: params?.travellerClass
-				},
-				appliedSortFilter: [
-					{
-						tabId: 'ONWARD',
-						sortId: '1',
-						filtersList: []
-					}
-				],
-				partnerCountry: 'IN'
-			});
+			const res = await getListingData(getSearchRequestObj(params));
 			listingData = res.data;
 			flights = listingData.onwardFlights;
 		} catch (error) {
@@ -85,46 +45,7 @@
 	}
 
 	onMount(async () => {
-		fetchListingData();
-
-		// check if local storage has recent searches
-		const recentSearchesFromLocalStorage = localStorage.getItem(LS_RECENT_SEARCHES);
-		let newSearchItem: IRecentSearch = {
-			id: Date.now().toString(),
-			createdAt: Date.now().toString(),
-			src: {
-				iataCode: params?.src,
-				name: String(getCityByCode(params?.src)),
-				city: String(getCityByCode(params?.src)),
-				countryCode: 'IN'
-			},
-			des: {
-				iataCode: params?.des,
-				name: String(getCityByCode(params?.des)),
-				city: String(getCityByCode(params?.des)),
-				countryCode: 'IN'
-			},
-			departDate: formatDate(params?.departDate)
-		};
-		let newRecentSearches: IRecentSearch[] = [];
-		if (recentSearchesFromLocalStorage) {
-			let recentSearches = JSON.parse(recentSearchesFromLocalStorage);
-			// update the array of recent searches in store and LS
-			newRecentSearches = recentSearches;
-			newRecentSearches = [newSearchItem, ...newRecentSearches];
-			update((value) => {
-				value.recentSearches = recentSearches;
-				return value;
-			});
-		} else {
-			newRecentSearches = [newSearchItem];
-		}
-		// update story and LS
-		localStorage.setItem(LS_RECENT_SEARCHES, JSON.stringify(newRecentSearches));
-		update((value) => {
-			value.recentSearches = newRecentSearches;
-			return value;
-		});
+		updateRecentSearches(params);
 	});
 
 	$: params.adultCount,
@@ -133,21 +54,15 @@
 		(travellerCount =
 			parseInt(params.adultCount) + parseInt(params.childCount) + parseInt(params.infantCount));
 
-	function searchFlightsUsingQuery(): IOnwardFlight[] {
-		let tempFlights: IOnwardFlight[] = [];
-		if (params?.src && params?.des) {
-			tempFlights = flights.filter((flight) => {
-				return (
-					flight.onwardSegmentDetails?.sourceAirportCode?.iataCode === params?.src &&
-					flight.onwardSegmentDetails.destinationAirportCode?.iataCode === params?.des
-				);
-			});
-		}
-		return tempFlights;
-	}
+	$: params.src, params.des, params.departDate, fetchListingData();
 
 	function getContainerHeight() {
 		return `calc(100vh - ${HEADER_HEIGHT.DEFAULT} - ${FOOTER_HEIGHT})`;
+	}
+
+	function handleCloseSheet() {
+		let newLabel = document.getElementById('modify-search');
+		newLabel?.click();
 	}
 </script>
 
@@ -176,7 +91,7 @@
 	type="top"
 	title="Modify Search"
 >
-	<FlightDetails />
+	<FlightDetails afterClickSearch={handleCloseSheet} />
 </BottomSheet>
 
 <section class={`overflow-y-scroll`} style={`height: ${getContainerHeight()}`}>
@@ -186,14 +101,14 @@
 				<div class="w-full h-16 rounded-lg shadow-md my-2 skeleton" />
 			{/each}
 		</div>
-	{:else if flights.length === 0}
+	{:else if flights?.length === 0}
 		<div class="w-full h-screen flex justify-center items-center">
 			<p>No flights found</p>
 		</div>
 	{/if}
-	{#if flights.length > 0}
+	{#if flights?.length > 0}
 		<ul class="pt-4">
-			{#each searchFlightsUsingQuery() as flight, i}
+			{#each flights as flight, i}
 				<li class="my-4">
 					<div class="flex justify-between">
 						<div>
@@ -230,7 +145,7 @@
 						{/each}
 					</div>
 				</li>
-				{#if i < flights.length - 1}
+				{#if i < flights?.length - 1}
 					<div class="divider" />
 				{/if}
 			{/each}

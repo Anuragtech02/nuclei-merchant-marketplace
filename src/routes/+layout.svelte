@@ -31,6 +31,7 @@
 	async function fetchHomeData() {
 		try {
 			const res = await getHomeData();
+			console.log(res.data);
 			update((value) => {
 				return { ...value, searchRequest: res.data.searchRequest };
 			});

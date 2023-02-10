@@ -19,7 +19,7 @@
 	>
 		{#if keepFirstSelected}
 			<option selected value={options[0].value}>{options[0].label}</option>
-			{#if options.length > 1}
+			{#if options?.length > 1}
 				{#each options?.slice(1) as option}
 					<option value={option.value}>{option.label}</option>
 				{/each}

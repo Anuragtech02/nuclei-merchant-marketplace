@@ -235,3 +235,58 @@ export interface IListingData {
 	isInternational: boolean;
 	warningMessages: IWarningMessage[];
 }
+
+// Sort Filter Options
+
+export interface ISortList {
+	sortId: number;
+	name: string;
+	subName: string;
+	iconUrl: string;
+	selected: boolean;
+}
+
+export interface ISubFilterList {
+	id: string;
+	text: string;
+	subText: string;
+	filterState: string;
+	imageUrl: string;
+}
+
+export interface IGridFilter {
+	subFilterList: ISubFilterList[];
+	filterSelectionType: string;
+	scrollType: string;
+}
+
+export interface IListItem {
+	id: string;
+	isIconVisible: boolean;
+	isSelected: boolean;
+	descText: string;
+	iconUrl: string;
+}
+
+export interface IListFilter {
+	title: string;
+	listItems: IListItem[];
+}
+
+export interface IFilterList {
+	id: string;
+	title: string;
+	gridFilter: IGridFilter;
+	listFilter: IListFilter;
+}
+
+export interface ISortFilter {
+	sortList: ISortList[];
+	filterList: IFilterList[];
+	tabId: string;
+	tabName: string;
+}
+
+export interface ISortFilterOptions {
+	sortFilter: ISortFilter[];
+}

@@ -105,7 +105,7 @@
 		</div>
 	</div>
 	<div>
-		{#if recentSearches.length > 0}
+		<!-- {#if recentSearches?.length > 0}
 			<h3>Recent Searches</h3>
 			<div class="divider" />
 			<ul>
@@ -119,7 +119,7 @@
 					<div class="divider" />
 				{/each}
 			</ul>
-		{/if}
+		{/if} -->
 	</div>
 	<!-- Popular Cities -->
 	<div class="mt-6">
