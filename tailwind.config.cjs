@@ -13,6 +13,10 @@ module.exports = {
 				accent: {
 					DEFAULT: '#1BA4F7'
 				}
+			},
+			height: {
+				header: '64px',
+				footer: '80px'
 			}
 		}
 	},

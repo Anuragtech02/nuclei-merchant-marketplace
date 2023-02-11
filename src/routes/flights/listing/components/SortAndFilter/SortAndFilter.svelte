@@ -17,12 +17,6 @@
 		ISortList,
 		ISubFilterList
 	} from '../../../../../utils/interfaces';
-	import {
-		DEPARTURE_TIME_OPTIONS,
-		MORE_FILTERS_OPTIONS,
-		SORT_OPTIONS,
-		STOP_OPTIONS
-	} from './constants';
 
 	interface IParams {
 		adultCount: string;
@@ -37,12 +31,6 @@
 	}
 
 	export let searchParams: IParams;
-	let preferredAirlinesOptions: Array<{
-		name: string;
-		code: string;
-		// icon is a svelte component
-		icon: any;
-	}> = [{ name: 'Air India', code: 'AI', icon: '/icons/meals.svg' }];
 	export let sortFilterOptions: ISortFilterOptions;
 
 	let sortList: ISortList[] = [];
@@ -57,7 +45,6 @@
 
 	$: sortFilterOptions, updateFilterOptions();
 
-	let sourceName: string;
 	let sortBy = {
 		sortId: 1,
 		name: 'Price\n(Cheapest First)',
@@ -88,14 +75,6 @@
 		}
 	}
 
-	function handleClickMoreFilters(value: string) {
-		if (gridFilters.moreFilters.includes(value)) {
-			gridFilters.moreFilters = gridFilters.moreFilters.filter((item: any) => item !== value);
-		} else {
-			gridFilters.moreFilters = [...gridFilters.moreFilters, value];
-		}
-	}
-
 	const ICONS: any = {
 		RefundableGreyIcon,
 		HandBaggageIcon,
@@ -116,6 +95,9 @@
 			iconUrl: '',
 			selected: true
 		};
+		gridFilters = {};
+		listFilters.preferredAirlines = [];
+		listFilters = {};
 	}
 
 	function getFilterGrid() {
@@ -140,12 +122,14 @@
 		const prevItems = gridFilters[gridItem.id] || [];
 		return prevItems?.findIndex((item: any) => item.id === subGridItem.id) > -1;
 	}
+
+	const HEADER_HEIGHT = '56px';
 </script>
 
-<BottomSheet id="sort-filters" type="bottom" classes="p-0 rounded-none min-h-screen">
+<BottomSheet id="sort-filters" type="bottom" classes="p-0 rounded-none min-h-screen relative">
 	<div slot="customHeaderComp" class="w-full">
-		<header class="bg-primary text-white w-full">
-			<div class="max-w-sm mx-auto flex justify-between p-4 items-center text-white">
+		<header class="bg-primary text-white w-full h-header">
+			<div class="max-w-sm mx-auto h-full flex justify-between p-4 items-center text-white">
 				<h5 class="text-white">Sort & Filter</h5>
 				<div>
 					<button
@@ -159,7 +143,7 @@
 			</div>
 		</header>
 	</div>
-	<main class="p-4 max-w-sm mx-auto">
+	<main class="px-4 max-w-sm mx-auto mainContainerHeight">
 		<div>
 			<h4>Sort By</h4>
 			<div class="grid grid-rows-2 grid-flow-col gap-2 mt-2">
@@ -194,7 +178,7 @@
 						<div
 							class={`grid grid-cols-${
 								Object.values(filterOption?.gridFilter?.subFilterList)?.length
-							} gap-2 mt-2`}
+							} grid-flow-col gap-2 mt-2`}
 						>
 							{#each Object.values(filterOption?.gridFilter?.subFilterList) as subFilter}
 								<div
@@ -273,10 +257,22 @@
 				</div>
 			{/each}
 		{/if}
-
-		<button
-			type="button"
-			class="btn bg-accent hover:bg-accent text-white mt-6 capitalize w-full border-0">Apply</button
+		<div
+			class="fixed bottom-0 left-0 w-full bg-bg p-4 h-footer drop-shadow-lg border border-stone-200"
 		>
+			<button
+				type="button"
+				class="btn bg-accent  hover:bg-accent text-white capitalize w-full border-0">Apply</button
+			>
+		</div>
 	</main>
 </BottomSheet>
+
+<style>
+	.mainContainerHeight {
+		height: calc(100vh - calc(theme('height.footer') + theme('height.header')));
+		padding-bottom: 2rem;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+</style>
