@@ -1,6 +1,6 @@
 <script lang="ts">
 	const FLIGHT_DETAILSL_HEIGHT = 80;
-	import GlobalStore from '../../utils/stores/globalStore';
+	import GlobalStore from '../../utils/stores/globalStore.store';
 	import { getCityByCode } from '../../utils/functions';
 	import Card from '../Card.svelte';
 	import type { ILocationObj, ISearchRequest } from '../../utils/interfaces';

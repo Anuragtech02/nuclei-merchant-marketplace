@@ -4,8 +4,8 @@
 	import { Appbar } from '../../../../components';
 	import { CITIES_WITH_NAMES, LS_RECENT_SEARCHES } from '../../../../utils/constants';
 	import { debounce } from '../../../../utils/functions';
-	import GlobalStore from '../../../../utils/stores/globalStore';
-	import type { IRecentSearch } from '../../../../utils/stores/globalStore';
+	import GlobalStore from '../../../../utils/stores/globalStore.store';
+	import type { IRecentSearch } from '../../../../utils/stores/globalStore.store';
 	import SearchItem from './SearchItem.svelte';
 	import { SearchIcon } from '../../../../assets/icons';
 	import type { IPopularCity } from '../../../../utils/interfaces';

@@ -262,11 +262,11 @@
 			{/each}
 		{/if}
 		<div
-			class="fixed bottom-0 left-0 w-full bg-bg p-4 h-footer drop-shadow-lg border border-stone-200"
+			class="fixed bottom-0 left-0 w-full bg-bg p-4 h-footer drop-shadow-lg border border-stone-200 flex justify-center items-center"
 		>
 			<label
 				for={'sort-filters'}
-				class="btn bg-accent hover:bg-accent text-white capitalize w-full border-0"
+				class="btn bg-accent hover:bg-accent text-white capitalize w-full border-0 max-w-sm mx-auto"
 				on:click={handleApplyFilters}
 				role="button"
 				tabindex="0"
@@ -275,7 +275,6 @@
 						handleApplyFilters();
 					}
 				}}>Apply</label
-			>
 			>
 		</div>
 	</main>

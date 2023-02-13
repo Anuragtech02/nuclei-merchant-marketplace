@@ -1,18 +1,20 @@
 <script lang="ts">
 	import { Appbar, Card, FlightDetails, SkeletonLoading } from '../../components';
-	import GlobalStore, { type IRecentSearch } from '../../utils/stores/globalStore';
+	import GlobalStore, { type IRecentSearch } from '../../utils/stores/globalStore.store';
+	import { WalletStore } from '../../utils/stores';
 	import type { IBooking } from '../../utils/interfaces';
 	import {
 		ArrowDownIcon,
 		ArrowRightBlackIcon,
-		ArrowRightIcon,
 		KebabMenuIcon,
 		PercentageIcon,
 		RecentIcon,
 		WalletIcon
 	} from '../../assets/icons';
 	import { getDateDayAndMonth } from '../../utils/functions';
+	import { onMount } from 'svelte';
 	const { subscribe } = GlobalStore;
+	const { subscribe: walletSubscribe } = WalletStore;
 	let balance: number = 0;
 	let upcomingBookings: IBooking[] = [];
 	let recentSearches: IRecentSearch[] = [];
@@ -23,6 +25,10 @@
 		upcomingBookings = value.upcomingBookings;
 		recentSearches = value.recentSearches;
 		isLoading = value.isLoading;
+	});
+
+	walletSubscribe((value) => {
+		balance = value.balance;
 	});
 
 	function getFormatedDateStr(date: string) {

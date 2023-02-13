@@ -9,10 +9,9 @@
 	import type { IListingData, IOnwardFlight, ISortFilterOptions } from '../../../utils/interfaces';
 	import CustomTitleComp from './components/CustomTitleComp.svelte';
 	import SortAndFilter from './components/SortAndFilter/SortAndFilter.svelte';
-	import GlobalStore, { type IRecentSearch } from '../../../utils/stores/globalStore';
+	import GlobalStore, { type IRecentSearch } from '../../../utils/stores/globalStore.store';
 	import { getSearchRequestObj, updateRecentSearches, type IParams } from './utils';
-
-	const { update } = GlobalStore;
+	import { goto } from '$app/navigation';
 
 	const FOOTER_HEIGHT = '64px';
 
@@ -57,6 +56,10 @@
 	}
 
 	onMount(async () => {
+		if (!params?.src || !params?.des || !params?.departDate) {
+			goto('/flights');
+		}
+
 		updateRecentSearches(params);
 		fetchSortFilterOptions();
 	});

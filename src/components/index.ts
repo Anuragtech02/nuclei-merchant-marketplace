@@ -9,3 +9,4 @@ export { default as ClassTravellers } from './FlightDetails/ClassTravellers.svel
 export { default as DepartureReturn } from './FlightDetails/DepartureReturn.svelte';
 export { default as FlightDetails } from './FlightDetails/index.svelte';
 export { default as NoInternet } from './NoInternet.svelte';
+export { default as ErrorModal } from './ErrorModal.svelte';

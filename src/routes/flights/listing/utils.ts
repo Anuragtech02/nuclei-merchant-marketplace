@@ -1,7 +1,7 @@
 import { LS_RECENT_SEARCHES } from '../../../utils/constants';
 import { formatDate, getCityByCode } from '../../../utils/functions';
-import type { IRecentSearch } from '../../../utils/stores/globalStore';
-import GlobalStore from '../../../utils/stores/globalStore';
+import type { IRecentSearch } from '../../../utils/stores/globalStore.store';
+import GlobalStore from '../../../utils/stores/globalStore.store';
 const { update } = GlobalStore;
 
 export interface IParams {

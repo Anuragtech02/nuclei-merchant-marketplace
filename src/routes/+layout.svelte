@@ -1,16 +1,18 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
+	// @ts-ignore
+	import { Boundary } from '@crownframework/svelte-error-boundary';
 	import { getHomeData, getUpcomingBookings, getWalletData } from '../utils/api/services';
-	import GlobalStore from '../utils/stores/globalStore';
-	import { HEADER_HEIGHT } from '../utils/constants';
-	import { NoInternet } from '../components';
+	import { GlobalStore, WalletStore } from '../utils/stores';
+	import { NoInternet, ErrorModal } from '../components';
 	const { update } = GlobalStore;
+	const { update: updateWallet } = WalletStore;
 
 	async function fetchWallet() {
 		try {
 			const res = await getWalletData();
-			update((value) => {
+			updateWallet((value) => {
 				return { ...value, balance: res.data.walletDetails.walletTotalBalance };
 			});
 		} catch (error: any) {
@@ -52,6 +54,7 @@
 </script>
 
 <main class={`mt-[80px] pt-2 max-w-screen-sm mx-auto`}>
+	<ErrorModal modalId="error-modal" />
 	<NoInternet />
 	<slot />
 </main>

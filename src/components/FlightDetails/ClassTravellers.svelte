@@ -2,7 +2,7 @@
 	import { onDestroy } from 'svelte';
 	import { BottomSheet, Counter, SkeletonLoading } from '..';
 	import { ArrowDownIcon } from '../../assets/icons';
-	import { GlobalStore } from '../../utils/stores/globalStore';
+	import { GlobalStore } from '../../utils/stores/globalStore.store';
 	import Card from '../Card.svelte';
 	const { subscribe, update } = GlobalStore;
 	let travelClass = '';

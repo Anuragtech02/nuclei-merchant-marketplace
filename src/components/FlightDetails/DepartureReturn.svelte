@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SkeletonLoading } from '..';
 	import { getDateDayAndMonth } from '../../utils/functions';
-	import { GlobalStore } from '../../utils/stores/globalStore';
+	import { GlobalStore } from '../../utils/stores/globalStore.store';
 	import Card from '../Card.svelte';
 	const { subscribe, update } = GlobalStore;
 	let departureDate = '';

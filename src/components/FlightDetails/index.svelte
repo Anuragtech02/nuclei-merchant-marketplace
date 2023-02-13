@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { ClassTravellers, DepartureReturn, SourceDestination } from '..';
-	import GlobalStore from '../../utils/stores/globalStore';
+	import GlobalStore from '../../utils/stores/globalStore.store';
 	import type { ISearchRequest } from '../../utils/interfaces';
 	const { subscribe } = GlobalStore;
 
