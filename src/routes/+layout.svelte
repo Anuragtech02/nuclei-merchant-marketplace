@@ -4,6 +4,7 @@
 	import { getHomeData, getUpcomingBookings, getWalletData } from '../utils/api/services';
 	import GlobalStore from '../utils/stores/globalStore';
 	import { HEADER_HEIGHT } from '../utils/constants';
+	import { NoInternet } from '../components';
 	const { update } = GlobalStore;
 
 	async function fetchWallet() {
@@ -51,6 +52,7 @@
 </script>
 
 <main class={`mt-[80px] pt-2 max-w-screen-sm mx-auto`}>
+	<NoInternet />
 	<slot />
 </main>
 

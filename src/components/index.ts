@@ -8,3 +8,4 @@ export { default as SourceDestination } from './FlightDetails/SourceDestination.
 export { default as ClassTravellers } from './FlightDetails/ClassTravellers.svelte';
 export { default as DepartureReturn } from './FlightDetails/DepartureReturn.svelte';
 export { default as FlightDetails } from './FlightDetails/index.svelte';
+export { default as NoInternet } from './NoInternet.svelte';
