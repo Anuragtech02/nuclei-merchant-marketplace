@@ -14,6 +14,8 @@ export interface IParams {
 	returnDate: string;
 	src: string;
 	travellerClass: string;
+	sortId: string;
+	[key: string]: string;
 }
 export function updateRecentSearches(params: IParams) {
 	// check if local storage has recent searches
@@ -75,6 +77,19 @@ export function updateRecentSearches(params: IParams) {
 }
 
 export function getSearchRequestObj(params: IParams) {
+	const filtersList: Array<{
+		filterId: string;
+		appliedFilterValueList: { filterValues: string[] };
+	}> = [];
+	Object.keys(params).forEach((key: string) => {
+		if (key?.includes('gridFilter') || key?.includes('listFilter')) {
+			filtersList.push({
+				filterId: key.replace('gridFilter.', '').replace('listFilter.', ''),
+				appliedFilterValueList: { filterValues: params[key].split(',') as any }
+			});
+		}
+	});
+
 	return {
 		src: {
 			iataCode: params?.src,
@@ -99,8 +114,8 @@ export function getSearchRequestObj(params: IParams) {
 		appliedSortFilter: [
 			{
 				tabId: 'ONWARD',
-				sortId: '1',
-				filtersList: []
+				sortId: params.sortId ?? '1',
+				filtersList
 			}
 		],
 		partnerCountry: 'IN'

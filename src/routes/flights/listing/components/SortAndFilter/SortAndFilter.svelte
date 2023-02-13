@@ -1,14 +1,7 @@
 <script lang="ts">
-	import {
-		CloseIcon,
-		HandBaggageIcon,
-		MealsGreyIcon,
-		RefundableGreyIcon,
-		MorningIcon,
-		NoonIcon,
-		EveningIcon,
-		NightIcon
-	} from '../../../../../assets/icons';
+	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
+	import { CloseIcon } from '../../../../../assets/icons';
 	import { BottomSheet } from '../../../../../components';
 	import { getCityByCode } from '../../../../../utils/functions';
 	import type {
@@ -30,7 +23,7 @@
 		travellerClass: string;
 	}
 
-	export let searchParams: IParams;
+	export let fetchListingData: () => void;
 	export let sortFilterOptions: ISortFilterOptions;
 
 	let sortList: ISortList[] = [];
@@ -52,40 +45,51 @@
 		iconUrl: '',
 		selected: true
 	};
-	let gridFilters: any = {
-		stopsCount: {} as ISubFilterList,
-		departureTime: 'morning',
-		moreFilters: []
-	};
-	let listFilters: any = {
-		preferredAirlines: []
-	};
+	let gridFilters: any = {};
+	let listFilters: any = {};
 
 	function handleClickSortBy(value: any) {
 		sortBy = value;
 	}
 
-	function handleClickPreferredAirlines(value: string) {
-		if (listFilters.preferredAirlines.includes(value)) {
-			listFilters.preferredAirlines = listFilters.preferredAirlines.filter(
-				(item: any) => item !== value
-			);
+	function handleClickListFilterItem(listFilterItem: any, item: any) {
+		// check if the current item is already selected
+		const prevItems = listFilters[listFilterItem.id] || [];
+		if (prevItems?.findIndex((prevItem: any) => prevItem.id === item.id) > -1) {
+			listFilters[listFilterItem.id] = prevItems.filter((prevItem: any) => prevItem.id !== item.id);
 		} else {
-			listFilters.preferredAirlines = [...listFilters.preferredAirlines, value];
+			listFilters[listFilterItem.id] = [...prevItems, item];
 		}
 	}
 
-	const ICONS: any = {
-		RefundableGreyIcon,
-		HandBaggageIcon,
-		MealsGreyIcon,
-		MorningIcon,
-		NoonIcon,
-		EveningIcon,
-		NightIcon
-	};
-
-	function handleApplyFilters() {}
+	function handleApplyFilters() {
+		// current URL
+		const url = $page.url;
+		const searchStr = url.search;
+		const searchParams = new URLSearchParams(searchStr);
+		// update the search params
+		searchParams.set('sortId', sortBy.sortId.toString());
+		// add gridFilters to searchParams
+		Object.keys(gridFilters).forEach((key) => {
+			const value = gridFilters[key];
+			searchParams.set(
+				`gridFilter.${key}`,
+				Array.isArray(value) ? value.map((item: any) => item.id).join(',') : value.id
+			);
+		});
+		// add listFilters to searchParams
+		Object.keys(listFilters).forEach((key) => {
+			const value = listFilters[key];
+			searchParams.set(
+				`listFilter.${key}`,
+				Array.isArray(value) ? value.map((item: any) => item.id).join(',') : value.id
+			);
+		});
+		console.log({ url, searchParams: searchParams.toString() });
+		// navigate to the new URL
+		goto(`${url.pathname}?${searchParams.toString()}`);
+		fetchListingData();
+	}
 
 	function handleResetFilters() {
 		sortBy = {
@@ -226,7 +230,7 @@
 						<button
 							class="btn btn-link capitalize text-primary p-0 m-0"
 							on:click={() => {
-								listFilters.preferredAirlines = [];
+								listFilters[filterOption.id] = [];
 							}}
 						>
 							Reset
@@ -244,9 +248,9 @@
 										<input
 											type="checkbox"
 											on:change={() => {
-												handleClickPreferredAirlines(listItem.id);
+												handleClickListFilterItem(filterOption, listItem);
 											}}
-											checked={listFilters.preferredAirlines.includes(listItem.id)}
+											checked={Boolean(listFilters[filterOption.id]?.includes(listItem.id))}
 											class="checkbox"
 										/>
 									</label>
@@ -260,9 +264,18 @@
 		<div
 			class="fixed bottom-0 left-0 w-full bg-bg p-4 h-footer drop-shadow-lg border border-stone-200"
 		>
-			<button
-				type="button"
-				class="btn bg-accent  hover:bg-accent text-white capitalize w-full border-0">Apply</button
+			<label
+				for={'sort-filters'}
+				class="btn bg-accent hover:bg-accent text-white capitalize w-full border-0"
+				on:click={handleApplyFilters}
+				role="button"
+				tabindex="0"
+				on:keydown={(e) => {
+					if (e.key === 'Enter') {
+						handleApplyFilters();
+					}
+				}}>Apply</label
+			>
 			>
 		</div>
 	</main>

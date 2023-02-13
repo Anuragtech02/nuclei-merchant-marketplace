@@ -25,10 +25,12 @@
 
 	const params: IParams = {} as IParams;
 
-	searchParams?.forEach((value: any, key: any) => {
-		// @ts-ignore
-		params[key] = value;
-	});
+	$: searchParams,
+		searchParams?.forEach((value: any, key: any) => {
+			// @ts-ignore
+			params[key] = value;
+		}),
+		fetchListingData();
 
 	let listingData: IListingData = {} as any;
 	let flights: IOnwardFlight[] = [] as any;
@@ -64,8 +66,6 @@
 		params.infantCount,
 		(travellerCount =
 			parseInt(params.adultCount) + parseInt(params.childCount) + parseInt(params.infantCount));
-
-	$: params.src, params.des, params.departDate, fetchListingData();
 
 	function getContainerHeight() {
 		return `calc(100vh - ${HEADER_HEIGHT.DEFAULT} - ${FOOTER_HEIGHT})`;
@@ -164,7 +164,7 @@
 	{/if}
 </section>
 
-<SortAndFilter {sortFilterOptions} searchParams={params} />
+<SortAndFilter {sortFilterOptions} {fetchListingData} />
 
 <footer class={`fixed bottom-0 left-0 w-full bg-[#E8E8EF] h-[64px]`}>
 	<div class="max-w-[sm] mx-auto">
