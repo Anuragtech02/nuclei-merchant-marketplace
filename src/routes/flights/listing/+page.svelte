@@ -24,20 +24,18 @@
 
 	const params: IParams = {} as IParams;
 
-	$: searchParams,
-		searchParams?.forEach((value: any, key: any) => {
-			// @ts-ignore
-			params[key] = value;
-		}),
-		fetchListingData();
+	searchParams?.forEach((value: any, key: any) => {
+		// @ts-ignore
+		params[key] = value;
+	});
 
 	let listingData: IListingData = {} as any;
 	let flights: IOnwardFlight[] = [] as any;
 
-	async function fetchListingData() {
+	async function fetchListingData(listingParams: IParams) {
 		isLoading = true;
 		try {
-			const res = await getListingData(getSearchRequestObj(params));
+			const res = await getListingData(getSearchRequestObj(listingParams));
 			listingData = res.data;
 			flights = listingData.onwardFlights;
 		} catch (error) {
@@ -58,11 +56,14 @@
 	onMount(async () => {
 		if (!params?.src || !params?.des || !params?.departDate) {
 			goto('/flights');
+			return;
 		}
-
+		fetchListingData(params);
 		updateRecentSearches(params);
 		fetchSortFilterOptions();
 	});
+
+	$: fetchListingData(params);
 
 	$: params.adultCount,
 		params.childCount,

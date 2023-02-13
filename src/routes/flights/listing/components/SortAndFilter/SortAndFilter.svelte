@@ -10,20 +10,9 @@
 		ISortList,
 		ISubFilterList
 	} from '../../../../../utils/interfaces';
+	import type { IParams } from '../../utils';
 
-	interface IParams {
-		adultCount: string;
-		childCount: string;
-		departDate: string;
-		des: string;
-		infantCount: string;
-		isNonStop: string;
-		returnDate: string;
-		src: string;
-		travellerClass: string;
-	}
-
-	export let fetchListingData: () => void;
+	export let fetchListingData: (params: IParams) => void;
 	export let sortFilterOptions: ISortFilterOptions;
 
 	let sortList: ISortList[] = [];
@@ -66,7 +55,7 @@
 		// current URL
 		const url = $page.url;
 		const searchStr = url.search;
-		const searchParams = new URLSearchParams(searchStr);
+		const searchParams: any = new URLSearchParams(searchStr);
 		// update the search params
 		searchParams.set('sortId', sortBy.sortId.toString());
 		// add gridFilters to searchParams
@@ -88,7 +77,7 @@
 		console.log({ url, searchParams: searchParams.toString() });
 		// navigate to the new URL
 		goto(`${url.pathname}?${searchParams.toString()}`);
-		fetchListingData();
+		fetchListingData(Object.fromEntries(searchParams) as IParams);
 	}
 
 	function handleResetFilters() {

@@ -1,8 +1,6 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
-	// @ts-ignore
-	import { Boundary } from '@crownframework/svelte-error-boundary';
 	import { getHomeData, getUpcomingBookings, getWalletData } from '../utils/api/services';
 	import { GlobalStore, WalletStore } from '../utils/stores';
 	import { NoInternet, ErrorModal } from '../components';
