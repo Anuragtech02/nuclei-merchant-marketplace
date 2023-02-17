@@ -2,7 +2,7 @@
 	export let count: number = 0;
 	export let min: number = 0;
 	export let max: number = 9;
-	export let maxDisabled: boolean;
+	export let maxDisabled: boolean | undefined;
 </script>
 
 <div
@@ -17,8 +17,10 @@
 		{max}
 		bind:value={count}
 	/>
-	<button class="bg-inherit px-2 pr-4" on:click={() => count++} disabled={maxDisabled ?? count >= 8}
-		>+</button
+	<button
+		class="bg-inherit px-2 pr-4"
+		on:click={() => count++}
+		disabled={maxDisabled || count >= max}>+</button
 	>
 </div>
 

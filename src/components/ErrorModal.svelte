@@ -3,9 +3,10 @@
 	function handleClickReload() {
 		window.location.reload();
 	}
+	export let checked: boolean = true;
 </script>
 
-<input type="checkbox" id={modalId} class="modal-toggle" />
+<input type="checkbox" id={modalId} {checked} class="modal-toggle" />
 <section class="modal z-999">
 	<div class="modal-box bg-white">
 		<div class="flex flex-col">

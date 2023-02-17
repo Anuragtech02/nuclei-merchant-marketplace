@@ -4,8 +4,14 @@
 	import { getHomeData, getUpcomingBookings, getWalletData } from '../utils/api/services';
 	import { GlobalStore, WalletStore } from '../utils/stores';
 	import { NoInternet, ErrorModal } from '../components';
-	const { update } = GlobalStore;
+	const { update, subscribe } = GlobalStore;
 	const { update: updateWallet } = WalletStore;
+
+	let showError: boolean = false;
+
+	subscribe((value) => {
+		showError = value.showError;
+	});
 
 	async function fetchWallet() {
 		try {
@@ -15,6 +21,9 @@
 			});
 		} catch (error: any) {
 			console.log('ERR_fetchWallet', error);
+			update((value) => {
+				return { ...value, isLoading: false, showError: true };
+			});
 		}
 	}
 
@@ -26,6 +35,9 @@
 			});
 		} catch (error: any) {
 			console.log('ERROR_fetchUpcomingBooking', error);
+			update((value) => {
+				return { ...value, isLoading: false, showError: true };
+			});
 		}
 	}
 
@@ -38,21 +50,31 @@
 			});
 		} catch (error: any) {
 			console.log('ERROR_fetchHomeData', error);
+			update((value) => {
+				return { ...value, isLoading: false, showError: true };
+			});
 		}
 	}
 
 	onMount(() => {
 		const allPromises = [fetchWallet(), fetchUpcomingBookings(), fetchHomeData()];
-		Promise.all(allPromises).then(() => {
-			update((value) => {
-				return { ...value, isLoading: false };
+		Promise.all(allPromises)
+			.then(() => {
+				update((value) => {
+					return { ...value, isLoading: false };
+				});
+			})
+			.catch((error) => {
+				console.log('ERROR_FETCH_ALL_APIS', error);
+				update((value) => {
+					return { ...value, isLoading: false, showError: true };
+				});
 			});
-		});
 	});
 </script>
 
 <main class={`mt-[80px] pt-2 max-w-screen-sm mx-auto`}>
-	<ErrorModal modalId="error-modal" />
+	<ErrorModal checked={showError} modalId="error-modal" />
 	<NoInternet />
 	<slot />
 </main>

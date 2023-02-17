@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { BackIcon } from '../assets/icons';
-	import { HEADER_HEIGHT } from '../utils/constants';
 	export let title: string = '';
 	export let backLink: string = '';
 	export let customTitleComp: boolean = false;

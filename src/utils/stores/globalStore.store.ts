@@ -16,7 +16,8 @@ const defaultGlobalState = {
 	searchRequest: defaultFlightDetails,
 	upcomingBookings: defaultUpcomingBookings,
 	recentSearches: defaultRecentSearches,
-	isLoading: true
+	isLoading: true,
+	showError: false
 };
 
 export interface IRecentSearch {
@@ -32,6 +33,7 @@ export interface IGlobalStoreData {
 	upcomingBookings: IBooking[];
 	recentSearches: IRecentSearch[];
 	isLoading: boolean;
+	showError: boolean;
 }
 
 interface IGlobalStore {
