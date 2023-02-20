@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/svelte';
-import Appbar from '../../components/Appbar.svelte';
+import Appbar from './Appbar.svelte';
 
 describe('Appbar', () => {
 	it('should display title taken through props', () => {

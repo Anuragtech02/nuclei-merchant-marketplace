@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/svelte';
-import Counter from '../../components/Counter.svelte';
+import Counter from './Counter.svelte';
 
 describe('Counter', () => {
 	it('displays the counter component with initial values', () => {

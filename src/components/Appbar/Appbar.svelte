@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { BackIcon } from '../assets/icons';
+	import { BackIcon } from '../../assets/icons';
 	export let title: string = '';
 	export let backLink: string = '';
 	export let customTitleComp: boolean = false;
