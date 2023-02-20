@@ -9,6 +9,7 @@
 	} from '../utils/api/services';
 	import { GlobalStore, WalletStore } from '../utils/stores';
 	import { NoInternet, ErrorModal } from '../components';
+	import { LS_RECENT_SEARCHES } from '../utils/constants';
 	const { update, subscribe } = GlobalStore;
 	const { update: updateWallet } = WalletStore;
 
@@ -17,6 +18,15 @@
 	subscribe((value) => {
 		showError = value.showError;
 	});
+
+	async function fetchRecentSearchesFromLS() {
+		const recentSearches = localStorage.getItem(LS_RECENT_SEARCHES);
+		if (recentSearches) {
+			update((value) => {
+				return { ...value, recentSearches: JSON.parse(recentSearches) };
+			});
+		}
+	}
 
 	async function fetchWallet() {
 		try {
@@ -103,6 +113,7 @@
 					return { ...value, isLoading: false, showError: true };
 				});
 			});
+		fetchRecentSearchesFromLS();
 	});
 </script>
 

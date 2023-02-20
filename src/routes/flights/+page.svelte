@@ -92,11 +92,8 @@
 	</div>
 	{#if recentSearches?.length > 0}
 		<div class="mt-6">
-			<div class="flex justify-between items-center">
+			<div class="flex justify-start items-center">
 				<h4>Recent Searches</h4>
-				{#if recentSearches.length > 1}
-					<a class="link link-hover text-sm text-primary" href="/flights">View All</a>
-				{/if}
 			</div>
 			<div class="carousel w-full max-w-full space-x-4">
 				{#each recentSearches as search}
