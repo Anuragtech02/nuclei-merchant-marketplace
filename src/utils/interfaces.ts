@@ -290,3 +290,17 @@ export interface ISortFilter {
 export interface ISortFilterOptions {
 	sortFilter: ISortFilter[];
 }
+
+export interface AirportList {
+	iataCode: string;
+	city: string;
+	name: string;
+	countryCode: string;
+	iconUrl: string;
+}
+
+export interface IPopularCitiesResponse {
+	status: Status;
+	title: string;
+	airportList: AirportList[];
+}

@@ -1,6 +1,7 @@
 import type {
 	IHomeData,
 	IListingData,
+	IPopularCitiesResponse,
 	ISortFilterOptions,
 	IUpcomingBookingsResponse,
 	IWalletResponse
@@ -25,7 +26,7 @@ function getWalletData() {
 }
 
 function getPopularCities() {
-	return API_LANDING.post('/getPopularCities');
+	return API_LANDING.post<IPopularCitiesResponse>('/getPopularCities');
 }
 
 function searchCity(searchText: string) {

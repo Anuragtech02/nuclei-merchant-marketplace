@@ -1,7 +1,12 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
-	import { getHomeData, getUpcomingBookings, getWalletData } from '../utils/api/services';
+	import {
+		getHomeData,
+		getPopularCities,
+		getUpcomingBookings,
+		getWalletData
+	} from '../utils/api/services';
 	import { GlobalStore, WalletStore } from '../utils/stores';
 	import { NoInternet, ErrorModal } from '../components';
 	const { update, subscribe } = GlobalStore;
@@ -56,8 +61,36 @@
 		}
 	}
 
+	async function fetchPopularCities() {
+		try {
+			const res = await getPopularCities();
+			update((value) => {
+				return {
+					...value,
+					popularCities: res.data.airportList?.map((item) => ({
+						city: item.city,
+						id: item.iataCode,
+						createdAt: Date.now().toString(),
+						name: item.name,
+						iataCode: item.iataCode
+					}))
+				};
+			});
+		} catch (error: any) {
+			console.log('ERROR_getPopluarCities', error);
+			update((value) => {
+				return { ...value, isLoading: false, showError: true };
+			});
+		}
+	}
+
 	onMount(() => {
-		const allPromises = [fetchWallet(), fetchUpcomingBookings(), fetchHomeData()];
+		const allPromises = [
+			fetchWallet(),
+			fetchUpcomingBookings(),
+			fetchHomeData(),
+			fetchPopularCities()
+		];
 		Promise.all(allPromises)
 			.then(() => {
 				update((value) => {

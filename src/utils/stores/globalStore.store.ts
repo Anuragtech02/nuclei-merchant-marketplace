@@ -2,6 +2,7 @@ import { writable, type Updater, type Writable } from 'svelte/store';
 import type {
 	IBooking,
 	IDestinationAirportCode,
+	IPopularCity,
 	ISearchRequest,
 	ISourceAirportCode
 } from '../interfaces';
@@ -16,6 +17,7 @@ const defaultGlobalState = {
 	searchRequest: defaultFlightDetails,
 	upcomingBookings: defaultUpcomingBookings,
 	recentSearches: defaultRecentSearches,
+	popularCities: [],
 	isLoading: true,
 	showError: false
 };
@@ -32,6 +34,7 @@ export interface IGlobalStoreData {
 	searchRequest: ISearchRequest;
 	upcomingBookings: IBooking[];
 	recentSearches: IRecentSearch[];
+	popularCities: IPopularCity[];
 	isLoading: boolean;
 	showError: boolean;
 }
