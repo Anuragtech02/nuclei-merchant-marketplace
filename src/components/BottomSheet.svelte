@@ -4,10 +4,11 @@
 	export let modalClasses = '';
 	export let type = 'bottom';
 	export let title = '';
+	export let open: boolean = false;
 </script>
 
 <div>
-	<input type="checkbox" {id} class="modal-toggle" />
+	<input type="checkbox" {id} checked={open} class="modal-toggle" />
 	<label for={id} class={`modal modal-bottom cursor-pointer ${modalClasses}`} {id}>
 		<label for="" class={`modal-box ${classes} relative w-screen bg-bg`}>
 			<div class="flex justify-center	pb-[1rem] relative w-full items-center">

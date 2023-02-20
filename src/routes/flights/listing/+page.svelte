@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
 	import { EditIcon, TweaksIcon } from '../../../assets/icons';
 	import { Appbar, BottomSheet, FlightDetails } from '../../../components';
 	import { getListingData, getSortFilterOptions } from '../../../utils/api/services';
@@ -14,20 +14,25 @@
 	import { goto } from '$app/navigation';
 
 	const FOOTER_HEIGHT = '64px';
+	let isOpenModifySearchSheet = false;
 
 	let travellerCount = 0;
 	let isLoading = true;
 	let sortFilterOptions: ISortFilterOptions = {} as ISortFilterOptions;
 
 	// extract all params from query in URL
-	let searchParams = $page.url.searchParams;
+	// let searchParams = $page.url.searchParams;
 
-	const params: IParams = {} as IParams;
+	export let data: PageData;
 
-	searchParams?.forEach((value: any, key: any) => {
-		// @ts-ignore
-		params[key] = value;
-	});
+	let params: IParams = {} as IParams;
+
+	$: params = data.params;
+
+	// searchParams?.forEach((value: any, key: any) => {
+	// 	// @ts-ignore
+	// 	params[key] = value;
+	// });
 
 	let listingData: IListingData = {} as any;
 	let flights: IOnwardFlight[] = [] as any;
@@ -76,8 +81,8 @@
 	}
 
 	function handleCloseSheet() {
-		let newLabel = document.getElementById('modify-search');
-		newLabel?.click();
+		console.log('Handle Close');
+		isOpenModifySearchSheet = false;
 	}
 </script>
 
@@ -105,6 +110,7 @@
 	classes="rounded-none rounded-b-xl"
 	type="top"
 	title="Modify Search"
+	open={isOpenModifySearchSheet}
 >
 	<FlightDetails afterClickSearch={handleCloseSheet} />
 </BottomSheet>

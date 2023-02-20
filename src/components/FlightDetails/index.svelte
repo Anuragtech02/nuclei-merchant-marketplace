@@ -7,6 +7,8 @@
 
 	export let afterClickSearch: () => void = () => {};
 
+	export let isOpenBottomSheet: boolean = false;
+
 	let isNonStopChecked: boolean = false;
 
 	let searchRequest: ISearchRequest = {} as ISearchRequest;
@@ -63,8 +65,9 @@
 			'&isNonStop=' +
 			isNonStopChecked;
 
-		goto(`/flights/listing${searchQuery}`, { replaceState: true });
+		goto(`/flights/listing${searchQuery}`);
 		if (afterClickSearch) {
+			console.log('After Click Search');
 			afterClickSearch();
 		}
 	}
@@ -72,7 +75,7 @@
 
 <SourceDestination />
 <DepartureReturn />
-<ClassTravellers />
+<ClassTravellers {isOpenBottomSheet} />
 
 <div>
 	<label for="non-stop" class="flex justify-start items-center">
@@ -84,7 +87,18 @@
 		/>
 		<span class="ml-2 text-sm text-stone-600"> Show only non-stop flights</span></label
 	>
-	<button class="btn bg-primary text-white w-full mt-4" on:click={handleClickSearch}>Search</button>
+	<label
+		for="modify-search"
+		class="btn bg-primary text-white w-full mt-4"
+		on:click={handleClickSearch}
+		tabindex="0"
+		role="button"
+		on:keydown={(e) => {
+			if (e.key === 'Enter') {
+				handleClickSearch();
+			}
+		}}>Search</label
+	>
 	{#if alertMessage?.length > 0}
 		<div class="alert alert-error shadow-lg">
 			<div>

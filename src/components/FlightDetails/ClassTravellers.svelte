@@ -17,6 +17,9 @@
 		value: string;
 	}> = [];
 
+	export let isOpenBottomSheet: boolean;
+	export let handleCloseSheet: () => void = () => {};
+
 	subscribe((value) => {
 		travelClass = value.searchRequest.travellerClass;
 		adults = value.searchRequest.adultCount;
@@ -73,7 +76,7 @@
 		</div>
 	{/if}
 
-	<BottomSheet id="traveller-class">
+	<BottomSheet id="traveller-class" open={isOpenBottomSheet}>
 		<div>
 			<h4 class="font-medium">Select Traveller{'(s)'}</h4>
 			<div class="mt-2 custom-data-container">

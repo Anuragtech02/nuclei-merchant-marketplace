@@ -3,10 +3,10 @@
 	function handleClickReload() {
 		window.location.reload();
 	}
-	export let checked: boolean = true;
+	export let open: boolean = true;
 </script>
 
-<input type="checkbox" id={modalId} {checked} class="modal-toggle" />
+<input type="checkbox" id={modalId} checked={open} class="modal-toggle" />
 <section class="modal z-999">
 	<div class="modal-box bg-white">
 		<div class="flex flex-col">
@@ -15,7 +15,7 @@
 			<span class="text-xs mt-2">If the problem persists, try restarting the browser.</span>
 			<label
 				for={modalId}
-				class="btn btn-primary bg-primary w-full mt-4"
+				class="btn btn-primary border-0 outline-0 bg-primary hover:bg-primary w-full mt-4"
 				role="button"
 				tabindex="0"
 				on:keydown={(e) => {

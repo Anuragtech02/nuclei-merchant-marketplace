@@ -74,7 +74,7 @@
 </script>
 
 <main class={`mt-[80px] pt-2 max-w-screen-sm mx-auto`}>
-	<ErrorModal checked={showError} modalId="error-modal" />
+	<ErrorModal open={showError} modalId="error-modal" />
 	<NoInternet />
 	<slot />
 </main>
